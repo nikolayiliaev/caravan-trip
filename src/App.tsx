@@ -16,7 +16,7 @@ function App() {
   const renderView = () => {
     switch (currentView) {
       case 'home':
-        return <HomeView onNavigate={setCurrentView} onSelectDay={(day) => { setSelectedDay(day); setCurrentView('day-detail') }} />
+        return <HomeView onNavigate={setCurrentView} />
       case 'itinerary':
         return <ItineraryView onSelectDay={(day) => { setSelectedDay(day); setCurrentView('day-detail') }} />
       case 'bookings':
@@ -30,7 +30,7 @@ function App() {
       case 'day-detail':
         return <DayDetailView day={selectedDay} onBack={() => setCurrentView('itinerary')} />
       default:
-        return <HomeView onNavigate={setCurrentView} onSelectDay={(day) => { setSelectedDay(day); setCurrentView('day-detail') }} />
+        return <HomeView onNavigate={setCurrentView} />
     }
   }
 
@@ -58,10 +58,9 @@ function App() {
 
 interface HomeViewProps {
   onNavigate: (view: View) => void
-  onSelectDay: (day: number) => void
 }
 
-function HomeView({ onNavigate, onSelectDay }: HomeViewProps) {
+function HomeView({ onNavigate }: HomeViewProps) {
   const today = new Date()
   const tripStart = new Date('2026-09-13')
   const daysUntilTrip = Math.ceil((tripStart.getTime() - today.getTime()) / (1000 * 60 * 60 * 24))
@@ -108,31 +107,6 @@ function HomeView({ onNavigate, onSelectDay }: HomeViewProps) {
         </button>
       </div>
 
-      {/* Days List */}
-      <div className="card p-6">
-        <h2 className="text-xl font-bold text-gray-800 mb-5 text-center">📆 ימי הטיול</h2>
-        <div className="space-y-5">
-          {itineraryData.days.map((day) => (
-            <button
-              key={day.dayNumber}
-              onClick={() => onSelectDay(day.dayNumber)}
-              className="day-card w-full text-right"
-            >
-              <div className="flex items-center gap-4 mb-2">
-                <span className="badge-blue text-sm">יום {day.dayNumber}</span>
-                <span className="text-gray-400 text-sm">{day.date}</span>
-              </div>
-              <h3 className="font-bold text-gray-800 mb-1">{day.area}</h3>
-              <p className="text-gray-500 text-sm">{day.mainActivity}</p>
-              {day.drivingHours > 0 && (
-                <div className="mt-3">
-                  <span className="badge-light text-xs">🚗 {day.drivingHours} שעות</span>
-                </div>
-              )}
-            </button>
-          ))}
-        </div>
-      </div>
     </div>
   )
 }
