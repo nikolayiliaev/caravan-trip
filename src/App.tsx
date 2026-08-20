@@ -18,7 +18,7 @@ function App() {
       case 'home':
         return <HomeView onNavigate={setCurrentView} onSelectDay={(day) => { setSelectedDay(day); setCurrentView('day-detail') }} />
       case 'itinerary':
-        return <ItineraryView onNavigate={setCurrentView} onSelectDay={(day) => { setSelectedDay(day); setCurrentView('day-detail') }} />
+        return <ItineraryView onSelectDay={(day) => { setSelectedDay(day); setCurrentView('day-detail') }} />
       case 'bookings':
         return <BookingsView />
       case 'shopping':
@@ -188,11 +188,10 @@ function MenuCard({ title, description, icon, onClick, color }: MenuCardProps) {
 }
 
 interface ItineraryViewProps {
-  onNavigate: (view: View) => void
   onSelectDay: (day: number) => void
 }
 
-function ItineraryView({ onNavigate, onSelectDay }: ItineraryViewProps) {
+function ItineraryView({ onSelectDay }: ItineraryViewProps) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <h1 className="text-4xl font-bold text-indigo-900 dark:text-white mb-8 text-center">מסלול יומי</h1>
