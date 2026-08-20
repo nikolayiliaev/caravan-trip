@@ -80,7 +80,7 @@ function HomeView({ onNavigate }: HomeViewProps) {
       </div>
 
       {/* Menu Grid */}
-      <div className="grid grid-cols-2 gap-5 mb-12">
+      <div className="grid grid-cols-2 mb-12">
         <button onClick={() => onNavigate('itinerary')} className="menu-card menu-card-blue">
           <div className="text-4xl mb-2">📅</div>
           <div className="font-bold text-lg">מסלול</div>
