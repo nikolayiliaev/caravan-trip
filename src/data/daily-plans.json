@@ -5,232 +5,180 @@
       "day": 1,
       "title": "נחיתה, קבלת קראוון, הצטיידות ונסיעה ל-Lipno",
       "schedule": [
-        {
-          "time": "10:00",
-          "activity": "נחיתה PRG",
-          "transport": "—",
-          "description": "מזוודות + ביקורת גבולות",
-          "food": "—",
-          "notes": "לא לבנות אטרקציה קשיחה"
-        },
-        {
-          "time": "11:15",
-          "activity": "נסיעה ל-Tuchoměřice",
-          "transport": "מונית/הסעה",
-          "description": "Blue Campers",
-          "food": "—",
-          "notes": "לא עם הקראוון עדיין"
-        },
-        {
-          "time": "12:00–13:00",
-          "activity": "מסירת Carado A132",
-          "transport": "—",
-          "description": "צילום מלא + תדריך מים/חשמל/WC/גז",
-          "food": "—",
-          "notes": "להדביק HEIGHT 3.14m"
-        },
-        {
-          "time": "13:00–14:00",
-          "activity": "Penny Market + dm",
-          "transport": "🚐",
-          "description": "קנייה ראשונה",
-          "food": "כריך/מאפה בדרך",
-          "notes": "הצטיידות לשני לילות"
-        },
-        {
-          "time": "14:00–17:15",
-          "activity": "Tuchoměřice → Lipno",
-          "transport": "🚐",
-          "description": "נסיעה רגועה עם עצירת שירות אחת",
-          "food": "—",
-          "notes": "לא למלא מיכל מים עד הסוף"
-        },
-        {
-          "time": "17:15–18:00",
-          "activity": "Camping Panorama Lipno",
-          "transport": "🚐",
-          "description": "Check-in + CEE + מים לפי צורך",
-          "food": "פסטה + סלט בקראוון",
-          "alternative": "אגם/טיילת קצרה",
-          "notes": "לינה 1/2"
-        }
+        {"time": "10:00", "activity": "נחיתה PRG", "transport": "—", "description": "מזוודות + ביקורת גבולות", "food": "—", "notes": "לא לבנות אטרקציה קשיחה"},
+        {"time": "11:15", "activity": "נסיעה ל-Tuchoměřice", "transport": "מונית/הסעה", "description": "Blue Campers", "food": "—", "notes": "לא עם הקראוון עדיין"},
+        {"time": "12:00–13:00", "activity": "מסירת Carado A132", "transport": "—", "description": "צילום מלא + תדריך מים/חשמל/WC/גז", "food": "—", "notes": "להדביק HEIGHT 3.14m"},
+        {"time": "13:00–14:00", "activity": "Penny Market + dm", "transport": "🚐", "description": "קנייה ראשונה", "food": "כריך/מאפה בדרך", "notes": "הצטיידות לשני לילות"},
+        {"time": "14:00–17:15", "activity": "Tuchoměřice → Lipno", "transport": "🚐", "description": "נסיעה רגועה עם עצירת שירות אחת", "food": "—", "notes": "לא למלא מיכל מים עד הסוף"},
+        {"time": "17:15–18:00", "activity": "Camping Panorama Lipno", "transport": "🚐", "description": "Check-in + CEE + מים לפי צורך", "food": "פסטה + סלט בקראוון", "notes": "לינה 1/2"}
       ],
-      "area": {
-        "name": "Lipno",
-        "description": "ליפנו הוא מאגר מים גדול בדרום בוהמיה, מוקף יערות Šumava; האזור הפך למרכז נופש משפחתי של מים, רכיבה ואטרקציות הר."
-      },
+      "area": {"name": "Lipno", "description": "ליפנו הוא מאגר מים גדול בדרום בוהמיה, מוקף יערות Šumava; האזור הפך למרכז נופש משפחתי של מים, רכיבה ואטרקציות הר."},
       "accommodation": "Camping Panorama Lipno",
       "recommendedFood": "ערב בקראוון: פסטה, רוטב עגבניות, פרמזן וסלט.",
       "weatherBackup": "יום מעבר – במקרה עיכוב טיסה להגיע ישר לקמפינג.",
-      "alternativeActivities": "הליכה קצרה לאורך האגם בלבד.",
-      "links": [
-        {
-          "type": "קמפינג",
-          "url": "https://camping-panorama.cz/en/"
-        },
-        {
-          "type": "Penny Market",
-          "url": "https://www.google.com/maps/search/?api=1&query=Penny+Market+Tuchom%C4%9B%C5%99ice+Czechia"
-        }
-      ]
+      "links": [{"type": "קמפינג", "url": "https://camping-panorama.cz/en/"}, {"type": "Penny Market", "url": "https://www.google.com/maps/search/?api=1&query=Penny+Market+Tuchom%C4%9B%C5%99ice+Czechia"}]
     },
     {
       "date": "14/09/2026",
       "day": 2,
       "title": "Lipno: Treetop Trail, Kingdom of Forest ו-Bobovka",
       "schedule": [
-        {
-          "time": "08:00",
-          "activity": "ארוחת בוקר בקראוון",
-          "transport": "—",
-          "description": "לחם/ביצים/יוגורט/פירות",
-          "food": "—",
-          "notes": "ממלאים בקבוקי מים"
-        },
-        {
-          "time": "09:30",
-          "activity": "יציאה לאזור Family Resort",
-          "transport": "ללא קראוון",
-          "description": "Treetop Trail",
-          "food": "—",
-          "notes": "תחבורה/שאטל מקומי אם זמין"
-        },
-        {
-          "time": "10:00–12:00",
-          "activity": "Treetop Trail",
-          "transport": "רגלי",
-          "description": "שביל צמרות + מגדל 40m",
-          "food": "—",
-          "alternative": "מגלשה 52m",
-          "notes": "לבדוק רוח/עננות"
-        },
-        {
-          "time": "12:00–14:30",
-          "activity": "Kingdom of Forest",
-          "transport": "רגלי",
-          "description": "פארק יער ומתקנים",
-          "food": "—",
-          "notes": "לא למהר"
-        },
-        {
-          "time": "14:30–15:30",
-          "activity": "צהריים",
-          "transport": "—",
-          "description": "מנוחה",
-          "food": "Hospůdka Bobovka / Restaurace Stodola",
-          "notes": "פשוט ומשפחתי"
-        },
-        {
-          "time": "16:00–17:00",
-          "activity": "Bobovka Lipno",
-          "transport": "רגלי/תחבורה",
-          "description": "Alpine coaster",
-          "food": "—",
-          "notes": "רק אם יבש והילד לא עייף"
-        },
-        {
-          "time": "17:15–18:30",
-          "activity": "Lipno Lake",
-          "transport": "רגלי",
-          "description": "גלידה + אגם",
-          "food": "—",
-          "alternative": "Czech RepuBRICK LEGO",
-          "notes": "LEGO = Plan B"
-        }
+        {"time": "08:00", "activity": "ארוחת בוקר בקראוון", "transport": "—", "description": "לחם/ביצים/יוגורט/פירות", "food": "—", "notes": "ממלאים בקבוקי מים"},
+        {"time": "09:30", "activity": "יציאה לאזור Family Resort", "transport": "ללא קראוון", "description": "Treetop Trail", "food": "—", "notes": "תחבורה/שאטל מקומי אם זמין"},
+        {"time": "10:00–12:00", "activity": "Treetop Trail", "transport": "רגלי", "description": "שביל צמרות + מגדל 40m", "food": "—", "notes": "לבדוק רוח/עננות"},
+        {"time": "12:00–14:30", "activity": "Kingdom of Forest", "transport": "רגלי", "description": "פארק יער ומתקנים", "food": "—", "notes": "לא למהר"},
+        {"time": "14:30–15:30", "activity": "צהריים", "transport": "—", "description": "מנוחה", "food": "Hospůdka Bobovka / Restaurace Stodola", "notes": "פשוט ומשפחתי"},
+        {"time": "16:00–17:00", "activity": "Bobovka Lipno", "transport": "רגלי/תחבורה", "description": "Alpine coaster", "food": "—", "notes": "רק אם יבש והילד לא עייף"},
+        {"time": "17:15–18:30", "activity": "Lipno Lake", "transport": "רגלי", "description": "גלידה + אגם", "food": "—", "notes": "LEGO = Plan B"}
       ],
-      "area": {
-        "name": "Lipno",
-        "description": "יום משפחתי כמעט בלי נהיגה. האזור משלב נוף של אגם והרי Šumava עם פארקי פעילות מודרניים לילדים."
-      },
+      "area": {"name": "Lipno", "description": "יום משפחתי כמעט בלי נהיגה. האזור משלב נוף של אגם והרי Šumava עם פארקי פעילות מודרניים לילדים."},
       "accommodation": "Camping Panorama Lipno — לילה 2/2",
       "recommendedFood": "צהריים בחוץ; ערב חביתה + סלט + לחם בקראוון.",
       "weatherBackup": "LEGO + Aquaworld; Bobovka רק אם יבש.",
-      "alternativeActivities": "שיט, SUP, אופניים, חוף.",
-      "links": [
-        {
-          "type": "קמפינג",
-          "url": "https://camping-panorama.cz/en/"
-        },
-        {
-          "type": "Treetop Trail",
-          "url": "https://www.stezkakorunamistromu.cz/en/"
-        },
-        {
-          "type": "Kingdom of Forest",
-          "url": "https://www.kralovstvilesa.cz/en/"
-        },
-        {
-          "type": "Bobovka",
-          "url": "https://www.lipno.cz/volny-cas/adrenalinove-aktivity/bobova-draha"
-        }
-      ]
+      "links": [{"type": "קמפינג", "url": "https://camping-panorama.cz/en/"}, {"type": "Treetop Trail", "url": "https://www.stezkakorunamistromu.cz/en/"}, {"type": "Kingdom of Forest", "url": "https://www.kralovstvilesa.cz/en/"}, {"type": "Bobovka", "url": "https://www.lipno.cz/volny-cas/adrenalinove-aktivity/bobova-draha"}]
     },
     {
       "date": "15/09/2026",
       "day": 3,
       "title": "Lipno → Traunfall → Gmunden / Grünberg",
       "schedule": [
-        {
-          "time": "08:00",
-          "activity": "יציאה מ-Lipno",
-          "transport": "🚐",
-          "description": "Checklist יציאה",
-          "food": "—",
-          "notes": "להפעיל וינייטה אוסטרית"
-        },
-        {
-          "time": "10:30–11:30",
-          "activity": "Traunfall",
-          "transport": "🚐",
-          "description": "מפל + הליכה קצרה",
-          "food": "פיקניק קטן",
-          "notes": "לא להאריך"
-        },
-        {
-          "time": "12:15–13:15",
-          "activity": "Gmunden",
-          "transport": "🚐",
-          "description": "טיילת/Schloss Ort",
-          "food": "DOLLMANNS / Landhotel Grünberg am See",
-          "notes": "חניה עילית בלבד"
-        },
-        {
-          "time": "14:00–17:30",
-          "activity": "Grünberg",
-          "transport": "🚐 לחניון תחנת העמק",
-          "description": "רכבל + Treetop Walk",
-          "food": "Grünbergalm",
-          "alternative": "Grünberg-Flitzer",
-          "notes": "רק ביובש"
-        },
-        {
-          "time": "18:00",
-          "activity": "Camping Traunsee",
-          "transport": "🚐",
-          "description": "Check-in + שירותי קראוון",
-          "food": "ערב בקראוון/מסעדה",
-          "alternative": "טיילת שקיעה",
-          "notes": "לילה אחד"
-        }
+        {"time": "08:00", "activity": "יציאה מ-Lipno", "transport": "🚐", "description": "Checklist יציאה", "food": "—", "notes": "להפעיל וינייטה אוסטרית"},
+        {"time": "10:30–11:30", "activity": "Traunfall", "transport": "🚐", "description": "מפל + הליכה קצרה", "food": "פיקניק קטן", "notes": "לא להאריך"},
+        {"time": "12:15–13:15", "activity": "Gmunden", "transport": "🚐", "description": "טיילת/Schloss Ort", "food": "DOLLMANNS / Landhotel Grünberg am See", "notes": "חניה עילית בלבד"},
+        {"time": "14:00–17:30", "activity": "Grünberg", "transport": "🚐 לחניון תחנת העמק", "description": "רכבל + Treetop Walk", "food": "Grünbergalm", "notes": "רק ביובש"},
+        {"time": "18:00", "activity": "Camping Traunsee", "transport": "🚐", "description": "Check-in + שירותי קראוון", "food": "ערב בקראוון/מסעדה", "notes": "לילה אחד"}
       ],
-      "area": {
-        "name": "Traunsee",
-        "description": "Traunsee הוא אגם אלפיני עמוק מוקף הרים; Gmunden היא עיירת נופש היסטורית המזוהה עם קרמיקה וטירת Ort."
-      },
+      "area": {"name": "Traunsee", "description": "Traunsee הוא אגם אלפיני עמוק מוקף הרים; Gmunden היא עיירת נופש היסטורית המזוהה עם קרמיקה וטירת Ort."},
       "accommodation": "Camping Traunsee",
       "recommendedFood": "צהריים Gmunden; בערב טורטיות/עוף בקראוון.",
       "weatherBackup": "לוותר על Flitzer; Gmunden + קפה/מוזיאון.",
-      "alternativeActivities": "Schloss Ort, טיילת Traunsee.",
-      "links": [
-        {
-          "type": "קמפינג",
-          "url": "https://camping-traunsee.at/en/"
-        },
-        {
-          "type": "Grünberg",
-          "url": "https://www.gruenberg.info/en/"
-        }
-      ]
+      "links": [{"type": "קמפינג", "url": "https://camping-traunsee.at/en/"}, {"type": "Grünberg", "url": "https://www.gruenberg.info/en/"}]
+    },
+    {
+      "date": "16/09/2026",
+      "day": 4,
+      "title": "Gmunden → Altaussee (בסיס) → Hallstatt + Salzwelten",
+      "schedule": [
+        {"time": "08:30", "activity": "יציאה מ-Camping Traunsee", "transport": "🚐", "description": "נסיעה ל-Altaussee", "food": "—", "notes": "יום מעבר קצר"},
+        {"time": "09:45–10:15", "activity": "Camping Temel", "transport": "🚐", "description": "Check-in/השארת הקראוון", "food": "—", "notes": "בסיס ל-2 לילות"},
+        {"time": "10:30–11:30", "activity": "Altaussee → Hallstatt", "transport": "תחבורה מקומית/מונית", "description": "לא לוקחים קראוון", "food": "—", "notes": "לבדוק חיבור יום קודם"},
+        {"time": "11:30–13:15", "activity": "Hallstatt", "transport": "רגלי", "description": "Marktplatz + טיילת + viewpoint", "food": "Seecafé / Grüner Anger", "notes": "עיירה קטנה וצפופה"},
+        {"time": "13:30–17:00", "activity": "Salzwelten Hallstatt", "transport": "פוניקולר + רגלי", "description": "מכרה מלח + Skywalk", "food": "—", "notes": "להזמין מראש; מינימום גיל 4"},
+        {"time": "17:30–18:30", "activity": "חזרה ל-Altaussee", "transport": "תחבורה מקומית", "description": "מנוחה", "food": "מרק/טוסטים בקראוון", "notes": "לינה 1/2"}
+      ],
+      "area": {"name": "Hallstatt", "description": "Hallstatt הוא לב ארכיאולוגי של האזור: כריית מלח מתועדת כאן אלפי שנים, והשם 'Hallstatt' נתן את שמו לתקופת הברזל Hallstatt."},
+      "accommodation": "Camping Temel Altaussee — לילה 1/2",
+      "recommendedFood": "צהריים Hallstatt; ערב קל בקראוון.",
+      "weatherBackup": "Salzwelten מצוין לגשם; לקצר טיילת.",
+      "links": [{"type": "קמפינג", "url": "https://www.camping-altaussee.com/en/"}, {"type": "Salzwelten", "url": "https://salzwelten.at/en/hallstatt/prices-opening-hours"}]
+    },
+    {
+      "date": "17/09/2026",
+      "day": 5,
+      "title": "Dachstein Krippenstein: מערת קרח + 5 Fingers",
+      "schedule": [
+        {"time": "07:15", "activity": "ארוחת בוקר", "transport": "—", "description": "שכבות + נעליים סגורות", "food": "—", "notes": "המערה קרה"},
+        {"time": "08:00", "activity": "Altaussee → Obertraun", "transport": "תחבורה מקומית/מונית", "description": "הקראוון נשאר ב-Temel", "food": "—", "notes": "עדיפות ללא קראוון"},
+        {"time": "08:40–11:15", "activity": "Giant Ice Cave", "transport": "רכבל + רגלי", "description": "מערת קרח מודרכת", "food": "—", "notes": "להגיע מוקדם"},
+        {"time": "11:15–14:00", "activity": "Krippenstein", "transport": "רכבל + רגלי", "description": "5 Fingers", "food": "Mountain restaurant", "notes": "לא להספיק הכל בכוח"},
+        {"time": "14:30–15:30", "activity": "Obertraun", "transport": "תחבורה מקומית", "description": "ירידה + קפה", "food": "אוכל באזור התחנה", "notes": "—"},
+        {"time": "16:30–18:30", "activity": "Altaussee Lake", "transport": "רגלי", "description": "הליכה + גלידה", "food": "—", "notes": "יום טבע חופשי"}
+      ],
+      "area": {"name": "Dachstein", "description": "מסיב Dachstein הוא נוף קרסטי אלפיני עם מערות קרח ומצוקים; Krippenstein משקיף על Hallstätter See."},
+      "accommodation": "Camping Temel — לילה 2/2",
+      "recommendedFood": "צהריים בהר/תחנה; ערב בקראוון או בעיירה.",
+      "weatherBackup": "אם הראות חלשה – מערת הקרח; בסגירות: Altaussee/Bad Aussee.",
+      "links": [{"type": "קמפינג", "url": "https://www.camping-altaussee.com/en/"}, {"type": "Dachstein", "url": "https://www.dachstein-salzkammergut.com/en/"}]
+    },
+    {
+      "date": "18/09/2026",
+      "day": 6,
+      "title": "Altaussee → Wolfgangsee: יום מעבר רגוע + אגם",
+      "schedule": [
+        {"time": "09:30", "activity": "יציאה מ-Altaussee", "transport": "🚐", "description": "נסיעה רגועה", "food": "—", "notes": "להגיע בחלון check-in"},
+        {"time": "11:00–12:00", "activity": "Paradiescamping", "transport": "🚐", "description": "Check-in Strandparadies", "food": "—", "notes": "מים+ביוב+10A"},
+        {"time": "12:30", "activity": "צהריים", "transport": "רגלי", "description": "מנוחה", "food": "Gasthof מקומי / קראוון", "notes": "—"},
+        {"time": "14:00–17:00", "activity": "Wolfgangsee", "transport": "שיט/אוטובוס", "description": "שיט או St. Gilgen", "food": "—", "notes": "Late-season פועל"},
+        {"time": "17:00–19:00", "activity": "קמפינג", "transport": "רגלי", "description": "אגם + מנוחה", "food": "ערב בקראוון", "notes": "להוריד קצב"}
+      ],
+      "area": {"name": "Wolfgangsee", "description": "Wolfgangsee הוא אגם של כפרי נופש היסטוריים. St. Wolfgang נקשר לקדוש Wolfgang מהמאה ה-10; שיט ציבורי באגם החל ב-1873."},
+      "accommodation": "Paradiescamping Wolfgangsee — לילה 1/2",
+      "recommendedFood": "צהריים פשוט; ערב בקראוון מול האגם.",
+      "weatherBackup": "שיט/עיירות אם בטוח; קפה ו-St. Gilgen.",
+      "links": [{"type": "קמפינג", "url": "https://www.paradiescamping.at/en/"}, {"type": "Wolfgangsee ferry", "url": "https://www.5schaetze.at/en/wolfgangseeschifffahrt/prices-and-timetables.html"}]
+    },
+    {
+      "date": "19/09/2026",
+      "day": 7,
+      "title": "Schafbergbahn + St. Wolfgang",
+      "schedule": [
+        {"time": "08:00", "activity": "ארוחת בוקר", "transport": "—", "description": "ביגוד חם לפסגה", "food": "—", "notes": "עגלה לא ניתנת להובלה"},
+        {"time": "09:00", "activity": "יציאה ל-St. Wolfgang", "transport": "אוטובוס/מונית/שיט", "description": "הקראוון נשאר בקמפינג", "food": "—", "notes": "להגיע מוקדם"},
+        {"time": "10:00–13:00", "activity": "Schafbergbahn", "transport": "רכבת", "description": "עלייה + פסגה + ירידה", "food": "Himmelspforte / EQ", "notes": "להזמין עלייה וירידה"},
+        {"time": "13:15–14:15", "activity": "צהריים", "transport": "רגלי", "description": "מנוחה", "food": "Steg 73 / Ledererhaus", "notes": "—"},
+        {"time": "14:30–17:30", "activity": "St. Wolfgang", "transport": "רגלי", "description": "כנסייה + סמטאות + אגם", "food": "גלידה", "notes": "—"},
+        {"time": "18:00", "activity": "חזרה לקמפינג", "transport": "תחבורה מקומית", "description": "מנוחה", "food": "ערב קל", "notes": "לינה 2/2"}
+      ],
+      "area": {"name": "Schafberg", "description": "Schafbergbahn פועלת מאז 1893: כ-35 דקות, 5.85 ק״מ ועלייה של כ-1,190 מ׳ לפסגה בגובה 1,783 מ׳."},
+      "accommodation": "Paradiescamping Wolfgangsee — לילה 2/2",
+      "recommendedFood": "צהריים בעיירה; ערב קל בקמפינג.",
+      "weatherBackup": "הרכבת עלולה להשתנות; Plan B שיט + St. Wolfgang/St. Gilgen.",
+      "links": [{"type": "קמפינג", "url": "https://www.paradiescamping.at/en/"}, {"type": "Schafbergbahn", "url": "https://www.5schaetze.at/en/schafbergbahn/prices-and-timetables.html"}, {"type": "Wolfgangsee ferry", "url": "https://www.5schaetze.at/en/wolfgangseeschifffahrt/prices-and-timetables.html"}]
+    },
+    {
+      "date": "20/09/2026",
+      "day": 8,
+      "title": "Wolfgangsee → Golling Waterfall → Hellbrunn → Prague",
+      "schedule": [
+        {"time": "07:30", "activity": "יציאה מ-Wolfgangsee", "transport": "🚐", "description": "סגירת קראוון מלאה", "food": "—", "notes": "יום נהיגה ארוך"},
+        {"time": "08:45–10:15", "activity": "Gollinger Wasserfall", "transport": "🚐 + רגלי", "description": "מפל דו-שלבי 76m", "food": "Cafe Maier / snack", "notes": "זהירות משביל רטוב"},
+        {"time": "10:30–11:15", "activity": "Golling → Hellbrunn", "transport": "🚐", "description": "נסיעה קצרה", "food": "—", "notes": "—"},
+        {"time": "11:30–14:00", "activity": "Hellbrunn", "transport": "🚐; P1", "description": "Trick Fountains + palace", "food": "Schlossrestaurant Hellbrunn", "notes": "Camper vans ב-P1 לביקור"},
+        {"time": "14:15–19:00", "activity": "Hellbrunn → Prague", "transport": "🚐", "description": "נסיעת החזרה", "food": "עצירת שירות אחת", "notes": "לא להוסיף Salzburg city"},
+        {"time": "19:00–20:00", "activity": "Camping Sokol Praha", "transport": "🚐", "description": "Check-in + חיבור", "food": "ארוחת ערב פשוטה", "notes": "לינה 1/2"}
+      ],
+      "area": {"name": "Golling & Hellbrunn", "description": "זה יום המעבר הארוך במכוון: שתי חוויות אוסטריות בדרך ואז הגעה לפראג בערב, כדי ש-21/9 יהיה יום עיר מלא בלי נהיגה."},
+      "accommodation": "Camping Sokol Praha — לילה 1/2",
+      "recommendedFood": "צהריים Hellbrunn; ערב פשוט בקמפינג.",
+      "weatherBackup": "בגשם כבד לדלג Golling; Hellbrunn פתוח בכל מזג אוויר.",
+      "links": [{"type": "קמפינג", "url": "https://www.campingsokol.cz/en/"}, {"type": "Golling Waterfall", "url": "https://golling.info/wasserfall/"}, {"type": "Hellbrunn", "url": "https://www.hellbrunn.at/en/"}]
+    },
+    {
+      "date": "21/09/2026",
+      "day": 9,
+      "title": "Prague: יום עיר מלא + קניות",
+      "schedule": [
+        {"time": "08:00", "activity": "ארוחת בוקר בקמפינג", "transport": "—", "description": "הקראוון נשאר מחובר", "food": "—", "notes": "לא נכנסים איתו למרכז"},
+        {"time": "09:00", "activity": "תחבורה ציבורית", "transport": "רכבת/אוטובוס", "description": "Old Town", "food": "—", "notes": "—"},
+        {"time": "09:45–12:30", "activity": "Old Town", "transport": "רגלי", "description": "כיכר + שעון + גשר קארל", "food": "—", "notes": "—"},
+        {"time": "12:30–13:30", "activity": "צהריים", "transport": "רגלי", "description": "מנוחה", "food": "Ribs of Prague / GamberoRosso", "notes": "—"},
+        {"time": "13:30–16:30", "activity": "Prague city", "transport": "רגלי", "description": "Kampa / Powder Tower / streets", "food": "גלידה", "notes": "—"},
+        {"time": "16:30–19:30", "activity": "PALLADIUM", "transport": "רגלי/מטרו", "description": "קניות + אוכל", "food": "33 מסעדות/בתי קפה", "notes": "חנויות עד 21:00"},
+        {"time": "20:00", "activity": "חזרה לקמפינג", "transport": "תחבורה ציבורית", "description": "אריזה", "food": "—", "notes": "לינה 2/2"}
+      ],
+      "area": {"name": "Prague", "description": "הגרעין של פראג התפתח סביב מצודת פראג במאה ה-9; המרכז ההיסטורי הוא אתר UNESCO מאז 1992."},
+      "accommodation": "Camping Sokol Praha — לילה 2/2",
+      "recommendedFood": "צהריים במרכז; ערב ב-Palladium.",
+      "weatherBackup": "Palladium + indoor kids.",
+      "links": [{"type": "קמפינג", "url": "https://www.campingsokol.cz/en/"}, {"type": "Palladium", "url": "https://www.palladiumpraha.cz/en/"}, {"type": "Prague with kids", "url": "https://prague.eu/en/kids/"}]
+    },
+    {
+      "date": "22/09/2026",
+      "day": 10,
+      "title": "תדלוק, החזרת הקראוון וטיסה 14:00",
+      "schedule": [
+        {"time": "06:45", "activity": "קימה", "transport": "—", "description": "ארוחת בוקר קצרה", "food": "—", "notes": "—"},
+        {"time": "07:15–08:00", "activity": "תחזוקת החזרה", "transport": "בקמפינג", "description": "Grey water + chemical WC + ניקוי", "food": "—", "notes": "לצלם פנים/חוץ"},
+        {"time": "08:00", "activity": "יציאה", "transport": "🚐", "description": "לכיוון Tuchoměřice", "food": "—", "notes": "—"},
+        {"time": "08:35–08:50", "activity": "GO Tank", "transport": "🚐", "description": "Diesel FULL + AdBlue אם צריך", "food": "—", "notes": "לשמור קבלה"},
+        {"time": "09:00–10:00", "activity": "Blue Campers", "transport": "🚐", "description": "החזרת הרכב", "food": "—", "notes": "לאשר שעה מראש"},
+        {"time": "10:00–10:30", "activity": "Prague Airport", "transport": "מונית/הסעה", "description": "Check-in", "food": "—", "notes": "טיסה 14:00"}
+      ],
+      "area": {"name": "Flight Day", "description": "יום לוגיסטי בלבד: להחזיר קראוון מסודר ומתודלק ולהגיע לשדה בלי לחץ."},
+      "accommodation": "—",
+      "recommendedFood": "בוקר בקראוון; אוכל בשדה.",
+      "weatherBackup": "לא רלוונטי.",
+      "links": [{"type": "GO Tank", "url": "https://www.goparking.cz/gotank/"}, {"type": "Blue Campers", "url": "https://www.google.com/maps/search/?api=1&query=Blue+Campers+Tuchom%C4%9B%C5%99ice+Czechia"}]
     }
   ]
 }
