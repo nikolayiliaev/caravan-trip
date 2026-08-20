@@ -1,0 +1,65 @@
+{
+  "caravan": {
+    "model": "Carado A132",
+    "height": "3.14m",
+    "length": "5.95m",
+    "weight": "עד 3.5 טון",
+    "important": [
+      {
+        "title": "גובה הרכב",
+        "description": "להדביק מול הנהג: HEIGHT 3.14 m; לא להיכנס לחניון מקורה/מנהרה ללא שילוט מתאים",
+        "priority": "critical"
+      },
+      {
+        "title": "לפני יציאה",
+        "description": "חלונות/סקיילייט סגורים, מדרגה/סוכך בפנים, ארונות נעולים, כבלים/צינורות מנותקים",
+        "priority": "critical"
+      },
+      {
+        "title": "מים נקיים",
+        "description": "לא לנסוע עם מיכל מלא ללא צורך; למלא בקמפינג לפי 1–2 ימי שימוש",
+        "priority": "recommended"
+      },
+      {
+        "title": "מים אפורים",
+        "description": "לרוקן רק בנקודות שירות מוסדרות",
+        "priority": "critical"
+      },
+      {
+        "title": "שירותים כימיים",
+        "description": "לרוקן בנקודת Chemical WC בלבד; כפפות + שטיפה",
+        "priority": "critical"
+      },
+      {
+        "title": "חשמל",
+        "description": "לנתק CEE לפני תזוזה; לגלגל כבל",
+        "priority": "critical"
+      }
+    ]
+  },
+  "tolls": {
+    "austria": {
+      "name": "Austria Vignette",
+      "type": "10-day vignette",
+      "vehicle": "עד 3.5 טון",
+      "validFrom": "15/9",
+      "validUntil": "20/9",
+      "url": "https://shop.asfinag.at/en/vehicle-type-selection/?source=Vignette",
+      "notes": "מתאימה לכל ימי אוסטריה במסלול"
+    },
+    "czech": {
+      "name": "Czech e-vignette",
+      "vehicle": "עד 3.5 טון",
+      "url": "https://edalnice.gov.cz/en",
+      "notes": "לבדוק אם Blue Campers כבר כוללת"
+    }
+  },
+  "fuel": {
+    "type": "Diesel + AdBlue",
+    "lastDay": {
+      "location": "GO Tank Tuchoměřice",
+      "url": "https://www.goparking.cz/gotank/",
+      "notes": "להחזיר מלא ולשמור קבלה"
+    }
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "trip": {
+    "title": "טיול קראוון צ'כיה–אוסטריה",
+    "dates": "13–22.09.2026",
+    "description": "עקרון המסלול: צ'כיה קצרה וממוקדת → רוב הטיול באוסטריה → חזרה לפראג ערב לפני יום העיר"
+  },
+  "days": [
+    {
+      "date": "13/09/2026",
+      "dayOfWeek": "א׳",
+      "dayNumber": 1,
+      "area": "Tuchoměřice → Lipno",
+      "mainActivity": "קבלת קראוון, קניות, נסיעה לאגם Lipno",
+      "accommodation": "Camping Panorama Lipno",
+      "drivingHours": 3.2
+    },
+    {
+      "date": "14/09/2026",
+      "dayOfWeek": "ב׳",
+      "dayNumber": 2,
+      "area": "Lipno",
+      "mainActivity": "Treetop Trail + Kingdom of Forest + Bobovka",
+      "accommodation": "Camping Panorama Lipno",
+      "drivingHours": 0
+    },
+    {
+      "date": "15/09/2026",
+      "dayOfWeek": "ג׳",
+      "dayNumber": 3,
+      "area": "Lipno → Traunfall → Gmunden",
+      "mainActivity": "מפל + Grünberg",
+      "accommodation": "Camping Traunsee",
+      "drivingHours": 2.8
+    },
+    {
+      "date": "16/09/2026",
+      "dayOfWeek": "ד׳",
+      "dayNumber": 4,
+      "area": "Gmunden → Altaussee + Hallstatt",
+      "mainActivity": "התמקמות בבסיס + Hallstatt + Salzwelten",
+      "accommodation": "Camping Temel",
+      "drivingHours": 1.3
+    },
+    {
+      "date": "17/09/2026",
+      "dayOfWeek": "ה׳",
+      "dayNumber": 5,
+      "area": "Dachstein Krippenstein",
+      "mainActivity": "Ice Cave + 5 Fingers + Altaussee Lake",
+      "accommodation": "Camping Temel",
+      "drivingHours": 0
+    },
+    {
+      "date": "18/09/2026",
+      "dayOfWeek": "ו׳",
+      "dayNumber": 6,
+      "area": "Altaussee → Wolfgangsee",
+      "mainActivity": "מעבר רגוע + שיט/אגם/St. Gilgen",
+      "accommodation": "Paradiescamping Wolfgangsee",
+      "drivingHours": 1.2
+    },
+    {
+      "date": "19/09/2026",
+      "dayOfWeek": "ש׳",
+      "dayNumber": 7,
+      "area": "Wolfgangsee",
+      "mainActivity": "Schafbergbahn + St. Wolfgang",
+      "accommodation": "Paradiescamping Wolfgangsee",
+      "drivingHours": 0
+    },
+    {
+      "date": "20/09/2026",
+      "dayOfWeek": "א׳",
+      "dayNumber": 8,
+      "area": "Wolfgangsee → Golling → Hellbrunn → Prague",
+      "mainActivity": "מפל + Hellbrunn + נסיעת החזרה הארוכה",
+      "accommodation": "Camping Sokol Praha",
+      "drivingHours": 5.8
+    },
+    {
+      "date": "21/09/2026",
+      "dayOfWeek": "ב׳",
+      "dayNumber": 9,
+      "area": "Prague",
+      "mainActivity": "יום עיר מלא + קניות; הקראוון נשאר בקמפינג",
+      "accommodation": "Camping Sokol Praha",
+      "drivingHours": 0
+    },
+    {
+      "date": "22/09/2026",
+      "dayOfWeek": "ג׳",
+      "dayNumber": 10,
+      "area": "Prague → Tuchoměřice → Airport",
+      "mainActivity": "תדלוק, החזרת קראוון, טיסה 14:00",
+      "accommodation": "—",
+      "drivingHours": 0.7
+    }
+  ]
+}

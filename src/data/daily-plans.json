@@ -1,0 +1,236 @@
+{
+  "dailyPlans": [
+    {
+      "date": "13/09/2026",
+      "day": 1,
+      "title": "נחיתה, קבלת קראוון, הצטיידות ונסיעה ל-Lipno",
+      "schedule": [
+        {
+          "time": "10:00",
+          "activity": "נחיתה PRG",
+          "transport": "—",
+          "description": "מזוודות + ביקורת גבולות",
+          "food": "—",
+          "notes": "לא לבנות אטרקציה קשיחה"
+        },
+        {
+          "time": "11:15",
+          "activity": "נסיעה ל-Tuchoměřice",
+          "transport": "מונית/הסעה",
+          "description": "Blue Campers",
+          "food": "—",
+          "notes": "לא עם הקראוון עדיין"
+        },
+        {
+          "time": "12:00–13:00",
+          "activity": "מסירת Carado A132",
+          "transport": "—",
+          "description": "צילום מלא + תדריך מים/חשמל/WC/גז",
+          "food": "—",
+          "notes": "להדביק HEIGHT 3.14m"
+        },
+        {
+          "time": "13:00–14:00",
+          "activity": "Penny Market + dm",
+          "transport": "🚐",
+          "description": "קנייה ראשונה",
+          "food": "כריך/מאפה בדרך",
+          "notes": "הצטיידות לשני לילות"
+        },
+        {
+          "time": "14:00–17:15",
+          "activity": "Tuchoměřice → Lipno",
+          "transport": "🚐",
+          "description": "נסיעה רגועה עם עצירת שירות אחת",
+          "food": "—",
+          "notes": "לא למלא מיכל מים עד הסוף"
+        },
+        {
+          "time": "17:15–18:00",
+          "activity": "Camping Panorama Lipno",
+          "transport": "🚐",
+          "description": "Check-in + CEE + מים לפי צורך",
+          "food": "פסטה + סלט בקראוון",
+          "alternative": "אגם/טיילת קצרה",
+          "notes": "לינה 1/2"
+        }
+      ],
+      "area": {
+        "name": "Lipno",
+        "description": "ליפנו הוא מאגר מים גדול בדרום בוהמיה, מוקף יערות Šumava; האזור הפך למרכז נופש משפחתי של מים, רכיבה ואטרקציות הר."
+      },
+      "accommodation": "Camping Panorama Lipno",
+      "recommendedFood": "ערב בקראוון: פסטה, רוטב עגבניות, פרמזן וסלט.",
+      "weatherBackup": "יום מעבר – במקרה עיכוב טיסה להגיע ישר לקמפינג.",
+      "alternativeActivities": "הליכה קצרה לאורך האגם בלבד.",
+      "links": [
+        {
+          "type": "קמפינג",
+          "url": "https://camping-panorama.cz/en/"
+        },
+        {
+          "type": "Penny Market",
+          "url": "https://www.google.com/maps/search/?api=1&query=Penny+Market+Tuchom%C4%9B%C5%99ice+Czechia"
+        }
+      ]
+    },
+    {
+      "date": "14/09/2026",
+      "day": 2,
+      "title": "Lipno: Treetop Trail, Kingdom of Forest ו-Bobovka",
+      "schedule": [
+        {
+          "time": "08:00",
+          "activity": "ארוחת בוקר בקראוון",
+          "transport": "—",
+          "description": "לחם/ביצים/יוגורט/פירות",
+          "food": "—",
+          "notes": "ממלאים בקבוקי מים"
+        },
+        {
+          "time": "09:30",
+          "activity": "יציאה לאזור Family Resort",
+          "transport": "ללא קראוון",
+          "description": "Treetop Trail",
+          "food": "—",
+          "notes": "תחבורה/שאטל מקומי אם זמין"
+        },
+        {
+          "time": "10:00–12:00",
+          "activity": "Treetop Trail",
+          "transport": "רגלי",
+          "description": "שביל צמרות + מגדל 40m",
+          "food": "—",
+          "alternative": "מגלשה 52m",
+          "notes": "לבדוק רוח/עננות"
+        },
+        {
+          "time": "12:00–14:30",
+          "activity": "Kingdom of Forest",
+          "transport": "רגלי",
+          "description": "פארק יער ומתקנים",
+          "food": "—",
+          "notes": "לא למהר"
+        },
+        {
+          "time": "14:30–15:30",
+          "activity": "צהריים",
+          "transport": "—",
+          "description": "מנוחה",
+          "food": "Hospůdka Bobovka / Restaurace Stodola",
+          "notes": "פשוט ומשפחתי"
+        },
+        {
+          "time": "16:00–17:00",
+          "activity": "Bobovka Lipno",
+          "transport": "רגלי/תחבורה",
+          "description": "Alpine coaster",
+          "food": "—",
+          "notes": "רק אם יבש והילד לא עייף"
+        },
+        {
+          "time": "17:15–18:30",
+          "activity": "Lipno Lake",
+          "transport": "רגלי",
+          "description": "גלידה + אגם",
+          "food": "—",
+          "alternative": "Czech RepuBRICK LEGO",
+          "notes": "LEGO = Plan B"
+        }
+      ],
+      "area": {
+        "name": "Lipno",
+        "description": "יום משפחתי כמעט בלי נהיגה. האזור משלב נוף של אגם והרי Šumava עם פארקי פעילות מודרניים לילדים."
+      },
+      "accommodation": "Camping Panorama Lipno — לילה 2/2",
+      "recommendedFood": "צהריים בחוץ; ערב חביתה + סלט + לחם בקראוון.",
+      "weatherBackup": "LEGO + Aquaworld; Bobovka רק אם יבש.",
+      "alternativeActivities": "שיט, SUP, אופניים, חוף.",
+      "links": [
+        {
+          "type": "קמפינג",
+          "url": "https://camping-panorama.cz/en/"
+        },
+        {
+          "type": "Treetop Trail",
+          "url": "https://www.stezkakorunamistromu.cz/en/"
+        },
+        {
+          "type": "Kingdom of Forest",
+          "url": "https://www.kralovstvilesa.cz/en/"
+        },
+        {
+          "type": "Bobovka",
+          "url": "https://www.lipno.cz/volny-cas/adrenalinove-aktivity/bobova-draha"
+        }
+      ]
+    },
+    {
+      "date": "15/09/2026",
+      "day": 3,
+      "title": "Lipno → Traunfall → Gmunden / Grünberg",
+      "schedule": [
+        {
+          "time": "08:00",
+          "activity": "יציאה מ-Lipno",
+          "transport": "🚐",
+          "description": "Checklist יציאה",
+          "food": "—",
+          "notes": "להפעיל וינייטה אוסטרית"
+        },
+        {
+          "time": "10:30–11:30",
+          "activity": "Traunfall",
+          "transport": "🚐",
+          "description": "מפל + הליכה קצרה",
+          "food": "פיקניק קטן",
+          "notes": "לא להאריך"
+        },
+        {
+          "time": "12:15–13:15",
+          "activity": "Gmunden",
+          "transport": "🚐",
+          "description": "טיילת/Schloss Ort",
+          "food": "DOLLMANNS / Landhotel Grünberg am See",
+          "notes": "חניה עילית בלבד"
+        },
+        {
+          "time": "14:00–17:30",
+          "activity": "Grünberg",
+          "transport": "🚐 לחניון תחנת העמק",
+          "description": "רכבל + Treetop Walk",
+          "food": "Grünbergalm",
+          "alternative": "Grünberg-Flitzer",
+          "notes": "רק ביובש"
+        },
+        {
+          "time": "18:00",
+          "activity": "Camping Traunsee",
+          "transport": "🚐",
+          "description": "Check-in + שירותי קראוון",
+          "food": "ערב בקראוון/מסעדה",
+          "alternative": "טיילת שקיעה",
+          "notes": "לילה אחד"
+        }
+      ],
+      "area": {
+        "name": "Traunsee",
+        "description": "Traunsee הוא אגם אלפיני עמוק מוקף הרים; Gmunden היא עיירת נופש היסטורית המזוהה עם קרמיקה וטירת Ort."
+      },
+      "accommodation": "Camping Traunsee",
+      "recommendedFood": "צהריים Gmunden; בערב טורטיות/עוף בקראוון.",
+      "weatherBackup": "לוותר על Flitzer; Gmunden + קפה/מוזיאון.",
+      "alternativeActivities": "Schloss Ort, טיילת Traunsee.",
+      "links": [
+        {
+          "type": "קמפינג",
+          "url": "https://camping-traunsee.at/en/"
+        },
+        {
+          "type": "Grünberg",
+          "url": "https://www.gruenberg.info/en/"
+        }
+      ]
+    }
+  ]
+}

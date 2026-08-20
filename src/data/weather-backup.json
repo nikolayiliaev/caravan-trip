@@ -1,0 +1,68 @@
+{
+  "weatherBackup": [
+    {
+      "area": "Lipno",
+      "mainPlan": "Treetop + Kingdom",
+      "planB": "Czech RepuBRICK LEGO + Aquaworld",
+      "planC": "Bobovka רק אם יבש",
+      "dontDo": "לא לעלות לתצפית ברוח חזקה",
+      "url": "https://www.lipno.info/"
+    },
+    {
+      "area": "Gmunden",
+      "mainPlan": "Grünberg-Flitzer",
+      "planB": "Treetop אם התנאים מאפשרים + Gmunden",
+      "planC": "קפה/מוזיאון",
+      "dontDo": "המגלשה נסגרת בגשם",
+      "url": "https://www.gruenberg.info/en/news/operating-times"
+    },
+    {
+      "area": "Hallstatt",
+      "mainPlan": "הליכה ארוכה בחוץ",
+      "planB": "Salzwelten",
+      "planC": "Bone House + בתי קפה",
+      "dontDo": "לא להסתובב עם הקראוון בעיר",
+      "url": "https://salzwelten.at/en/hallstatt/prices-opening-hours"
+    },
+    {
+      "area": "Dachstein",
+      "mainPlan": "5 Fingers",
+      "planB": "Giant Ice Cave",
+      "planC": "Obertraun / Bad Aussee",
+      "dontDo": "לא לעלות רק בשביל תצפית בלי ראות",
+      "url": "https://www.dachstein-salzkammergut.com/en/"
+    },
+    {
+      "area": "Wolfgangsee",
+      "mainPlan": "Schafberg views",
+      "planB": "Wolfgangsee ferry + St. Wolfgang",
+      "planC": "St. Gilgen",
+      "dontDo": "רכבות עשויות להתבטל במזג אוויר גרוע",
+      "url": "https://www.5schaetze.at/en/schafbergbahn/prices-and-timetables.html"
+    },
+    {
+      "area": "Golling",
+      "mainPlan": "Waterfall trail",
+      "planB": "Aqua Salza Golling",
+      "planC": "להגיע מוקדם ל-Hellbrunn",
+      "dontDo": "לא לשבילים חלקים בסערה",
+      "url": "https://golling.info/"
+    },
+    {
+      "area": "Hellbrunn",
+      "mainPlan": "—",
+      "planB": "פתוח בכל מזג אוויר",
+      "planC": "Salzburg indoor",
+      "dontDo": "להביא מעיל גשם",
+      "url": "https://www.hellbrunn.at/en/"
+    },
+    {
+      "area": "Prague",
+      "mainPlan": "יום הליכה",
+      "planB": "Palladium + indoor kids",
+      "planC": "Prague City Tourism kids",
+      "dontDo": "לא להיכנס עם הקראוון למרכז",
+      "url": "https://prague.eu/en/kids/"
+    }
+  ]
+}

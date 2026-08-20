@@ -1,0 +1,93 @@
+{
+  "shopping": {
+    "mainStore": {
+      "name": "Penny Market Tuchoměřice",
+      "when": "יום ראשון 13/9",
+      "url": "https://www.google.com/maps/search/?api=1&query=Penny+Market+Tuchom%C4%9B%C5%99ice+Czechia"
+    },
+    "categories": [
+      {
+        "name": "בוקר",
+        "items": "לחם/לחמניות, ביצים, חמאה, גבינות, יוגורט, חלב, קורנפלקס/גרנולה, פירות",
+        "quantity": "2–3 ימים",
+        "usage": "בוקר בקמפינג",
+        "rebuy": true
+      },
+      {
+        "name": "ירקות",
+        "items": "עגבניות, מלפפון, פלפל, חסה/סלט מוכן",
+        "quantity": "2–3 ימים",
+        "usage": "סלטים + כריכים",
+        "rebuy": true
+      },
+      {
+        "name": "צהריים לדרך",
+        "items": "טורטיות/לחם, גבינה, פסטרמה/נקניק, טונה, קרקרים, פירות, חטיפי גרנולה",
+        "quantity": "2 ימים",
+        "usage": "ימי רכבל/נסיעה",
+        "rebuy": true
+      },
+      {
+        "name": "ערב 1",
+        "items": "פסטה + רוטב עגבניות + פרמזן",
+        "quantity": "1 ארוחה",
+        "usage": "Lipno",
+        "rebuy": false
+      },
+      {
+        "name": "ערב 2",
+        "items": "ביצים + לחם + סלט + גבינה",
+        "quantity": "1 ארוחה",
+        "usage": "Lipno/Traunsee",
+        "rebuy": false
+      },
+      {
+        "name": "ערב 3",
+        "items": "טורטיות + עוף/גבינה + ירקות",
+        "quantity": "1 ארוחה",
+        "usage": "Altaussee",
+        "rebuy": false
+      },
+      {
+        "name": "ערב 4",
+        "items": "מרק מוכן + טוסט/לחם",
+        "quantity": "1 ארוחה",
+        "usage": "יום קר/גשום",
+        "rebuy": false
+      },
+      {
+        "name": "ילד",
+        "items": "חטיפים מוכרים, ביסקוויטים, מעדן, מיץ קטן",
+        "quantity": "מתון",
+        "usage": "גיבוי בדרך",
+        "rebuy": true
+      },
+      {
+        "name": "מזווה",
+        "items": "שמן קטן, מלח, פלפל, סוכר, קטשופ, מיונז",
+        "quantity": "קטן",
+        "usage": "בישול בסיסי",
+        "rebuy": false
+      },
+      {
+        "name": "ניקיון",
+        "items": "נוזל כלים, ספוג, נייר מגבת, שקיות אשפה, מגבונים",
+        "quantity": "1 מכל",
+        "usage": "קראוון",
+        "rebuy": false,
+        "store": "Penny + dm",
+        "storeUrl": "https://www.dm.cz/store/p0kn/tuchomerice"
+      },
+      {
+        "name": "שירותים",
+        "items": "כפפות חד-פעמיות + חומר לשירותים רק אם לא מסופק",
+        "quantity": "קטן",
+        "usage": "ריקון WC",
+        "rebuy": false,
+        "store": "dm",
+        "storeUrl": "https://www.dm.cz/store/p0kn/tuchomerice"
+      }
+    ],
+    "mealPlan": "חלוקה מומלצת: כמעט כל ארוחות הבוקר בקראוון; 3–4 ארוחות ערב פשוטות בקראוון; מסעדה טובה אחת ביום בימי האטרקציות."
+  }
+}

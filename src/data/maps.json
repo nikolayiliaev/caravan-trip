@@ -1,0 +1,75 @@
+{
+  "maps": {
+    "overview": [
+      {
+        "name": "מפה אופטימלית 1",
+        "description": "Tuchoměřice → Lipno → Traunfall → Gmunden/Traunsee",
+        "url": "https://www.google.com/maps/dir/?api=1&origin=Tuchom%C4%9B%C5%99ice%2C+Czechia&destination=Camping+Traunsee%2C+Altm%C3%BCnster%2C+Austria&travelmode=driving&waypoints=Penny+Market%2C+Ke+Kopanin%C4%9B%2C+Tuchom%C4%9B%C5%99ice%2C+Czechia%7CCamping+Panorama+Lipno%2C+Lipno+nad+Vltavou%2C+Czechia%7CTraunfall%2C+Austria%7CGr%C3%BCnberg+cable+car%2C+Gmunden%2C+Austria",
+        "notes": "Golling הועבר לסוף כדי למנוע זיגזג"
+      },
+      {
+        "name": "מפה אופטימלית 2",
+        "description": "Traunsee → Altaussee → Wolfgangsee → Golling → Hellbrunn → Prague",
+        "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Traunsee%2C+Altm%C3%BCnster%2C+Austria&destination=Camping+Sokol+Praha%2C+N%C3%A1rodn%C3%ADch+hrdin%C5%AF+290%2C+Prague%2C+Czechia&travelmode=driving&waypoints=Camping+Temel%2C+Altaussee%2C+Austria%7CParadiescamping+Wolfgangsee%2C+Abersee%2C+Austria%7CGollinger+Wasserfall%2C+Austria%7CHellbrunn+Palace%2C+Salzburg%2C+Austria",
+        "notes": "Hallstatt/Dachstein הם טיולי כוכב ללא הקראוון"
+      }
+    ],
+    "daily": [
+      {
+        "day": "13/9",
+        "description": "Tuchoměřice → Penny → Lipno",
+        "url": "https://www.google.com/maps/dir/?api=1&origin=Tuchom%C4%9B%C5%99ice%2C+Czechia&destination=Camping+Panorama+Lipno%2C+Czechia&travelmode=driving&waypoints=Penny+Market%2C+Ke+Kopanin%C4%9B%2C+Tuchom%C4%9B%C5%99ice%2C+Czechia"
+      },
+      {
+        "day": "14/9",
+        "description": "Lipno attractions",
+        "url": "https://www.google.com/maps/search/?api=1&query=Lipno+Family+Resort+Treetop+Walkway+Czechia"
+      },
+      {
+        "day": "15/9",
+        "description": "Lipno → Traunfall → Grünberg → Traunsee",
+        "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Panorama+Lipno%2C+Czechia&destination=Camping+Traunsee%2C+Altm%C3%BCnster%2C+Austria&travelmode=driving&waypoints=Traunfall%2C+Austria%7CGr%C3%BCnberg+cable+car%2C+Gmunden%2C+Austria"
+      },
+      {
+        "day": "16/9",
+        "description": "Traunsee → Camping Temel",
+        "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Traunsee%2C+Altm%C3%BCnster%2C+Austria&destination=Camping+Temel%2C+Altaussee%2C+Austria&travelmode=driving"
+      },
+      {
+        "day": "16/9-hallstatt",
+        "description": "Hallstatt / Salzwelten בלי קראוון",
+        "url": "https://www.google.com/maps/search/?api=1&query=Hallstatt+Austria+Salzwelten"
+      },
+      {
+        "day": "17/9",
+        "description": "Dachstein בלי קראוון",
+        "url": "https://www.google.com/maps/search/?api=1&query=Dachstein+Krippenstein+Obertraun+Austria"
+      },
+      {
+        "day": "18/9",
+        "description": "Altaussee → Wolfgangsee",
+        "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Temel%2C+Altaussee%2C+Austria&destination=Paradiescamping+Wolfgangsee%2C+Abersee%2C+Austria&travelmode=driving"
+      },
+      {
+        "day": "19/9",
+        "description": "Schafbergbahn / St. Wolfgang",
+        "url": "https://www.google.com/maps/search/?api=1&query=SchafbergBahn+St+Wolfgang+Austria"
+      },
+      {
+        "day": "20/9",
+        "description": "Wolfgangsee → Golling → Hellbrunn → Prague",
+        "url": "https://www.google.com/maps/dir/?api=1&origin=Paradiescamping+Wolfgangsee%2C+Abersee%2C+Austria&destination=Camping+Sokol+Praha%2C+Prague%2C+Czechia&travelmode=driving&waypoints=Gollinger+Wasserfall%2C+Austria%7CHellbrunn+Palace%2C+Salzburg%2C+Austria"
+      },
+      {
+        "day": "21/9",
+        "description": "Prague Old Town + Palladium",
+        "url": "https://www.google.com/maps/search/?api=1&query=Old+Town+Square+Prague+Palladium"
+      },
+      {
+        "day": "22/9",
+        "description": "Camping Sokol → GO Tank → Blue Campers",
+        "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Sokol+Praha%2C+Prague%2C+Czechia&destination=Blue+Campers+Tuchom%C4%9B%C5%99ice%2C+Czechia&travelmode=driving&waypoints=GO+tank+Tuchom%C4%9B%C5%99ice+Czechia"
+      }
+    ]
+  }
+}

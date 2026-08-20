@@ -1,0 +1,104 @@
+{
+  "bookings": [
+    {
+      "id": 1,
+      "item": "Camping Panorama Lipno",
+      "dates": "13–15/9",
+      "priority": "high",
+      "description": "2 לילות + חשמל; לבקש מים ליד/בעמדה",
+      "url": "https://camping-panorama.cz/en/",
+      "notes": "אשרו התאמה ל-5.95m / 3.14m",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "item": "Camping Traunsee",
+      "dates": "15/9",
+      "priority": "high",
+      "description": "לילה אחד + חשמל; לבקש water hookup אם קיים",
+      "url": "https://camping-traunsee.at/en/",
+      "notes": "לא להניח שיש חיבור מים בכל עמדה",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "item": "Camping Temel",
+      "dates": "16–18/9",
+      "priority": "high",
+      "description": "2 לילות; motorhome + electricity",
+      "url": "https://www.camping-altaussee.com/en/",
+      "notes": "פתוח עד 30/9; רוב העמדות 16A",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "item": "Salzwelten Hallstatt",
+      "dates": "16/9",
+      "priority": "high",
+      "description": "שעה סביב 13:30–14:00",
+      "url": "https://salzwelten.at/en/hallstatt/prices-opening-hours",
+      "notes": "מגיל 4",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "item": "Dachstein Krippenstein",
+      "dates": "17/9",
+      "priority": "high",
+      "description": "Cable car + Giant Ice Cave + 5 Fingers",
+      "url": "https://www.dachstein-salzkammergut.com/en/",
+      "notes": "להגיע מוקדם; cutoff אחרי 14/9 מוקדם",
+      "completed": false
+    },
+    {
+      "id": 6,
+      "item": "Paradiescamping Wolfgangsee",
+      "dates": "18–20/9",
+      "priority": "high",
+      "description": "2 לילות Strandparadies אם פנוי",
+      "url": "https://www.paradiescamping.at/en/",
+      "notes": "מים+ביוב+10A; check-in 11–12 או 13:30–18",
+      "completed": false
+    },
+    {
+      "id": 7,
+      "item": "Schafbergbahn",
+      "dates": "19/9",
+      "priority": "high",
+      "description": "עלייה/ירידה סביב 10:00",
+      "url": "https://www.5schaetze.at/en/schafbergbahn/prices-and-timetables.html",
+      "notes": "בוחרים שעת עלייה וירידה",
+      "completed": false
+    },
+    {
+      "id": 8,
+      "item": "Hellbrunn",
+      "dates": "20/9",
+      "priority": "medium",
+      "description": "כרטיס אונליין סביב 11:30",
+      "url": "https://www.hellbrunn.at/en/",
+      "notes": "פתוח בכל מזג אוויר; Camper P1",
+      "completed": false
+    },
+    {
+      "id": 9,
+      "item": "Camping Sokol Praha",
+      "dates": "20–22/9",
+      "priority": "high",
+      "description": "2 לילות; pitch עם CEE ומים אם פנוי",
+      "url": "https://www.campingsokol.cz/en/rezervace/",
+      "notes": "פתוח בתאריכים שלכם",
+      "completed": false
+    },
+    {
+      "id": 10,
+      "item": "Austria 10-day vignette",
+      "dates": "15/9",
+      "priority": "high",
+      "description": "לרכב עד 3.5t",
+      "url": "https://shop.asfinag.at/en/vehicle-type-selection/?source=Vignette",
+      "notes": "מספיקה עד 20/9",
+      "completed": false
+    }
+  ]
+}
