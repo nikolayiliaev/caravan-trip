@@ -461,10 +461,256 @@ function WeatherView() {
   )
 }
 
+interface FlightData {
+  outbound: {
+    date: string
+    route: string
+    departureTime: string
+    arrivalTime: string
+  }
+  return: {
+    date: string
+    route: string
+    departureTime: string
+    arrivalTime: string
+  }
+  notes: string[]
+}
+
+const defaultFlightData: FlightData = {
+  outbound: {
+    date: '13/09/2026',
+    route: 'TLV → PRG',
+    departureTime: '06:00',
+    arrivalTime: '10:00 (שעון מקומי)'
+  },
+  return: {
+    date: '22/09/2026',
+    route: 'PRG → TLV',
+    departureTime: '14:00',
+    arrivalTime: '19:00 (שעון ישראל)'
+  },
+  notes: [
+    'להגיע לשדה 3 שעות לפני',
+    'לוודא דרכונים בתוקף',
+    'משקל מזוודה: עד 23 ק״ג'
+  ]
+}
+
 function FlightView() {
+  const [flightData, setFlightData] = useState<FlightData>(() => {
+    const saved = localStorage.getItem('flight_data')
+    return saved ? JSON.parse(saved) : defaultFlightData
+  })
+  const [isEditing, setIsEditing] = useState(false)
+  const [editData, setEditData] = useState<FlightData>(flightData)
+  const [newNote, setNewNote] = useState('')
+
+  const handleSave = () => {
+    setFlightData(editData)
+    localStorage.setItem('flight_data', JSON.stringify(editData))
+    setIsEditing(false)
+  }
+
+  const handleCancel = () => {
+    setEditData(flightData)
+    setIsEditing(false)
+    setNewNote('')
+  }
+
+  const addNote = () => {
+    if (newNote.trim()) {
+      setEditData({
+        ...editData,
+        notes: [...editData.notes, newNote.trim()]
+      })
+      setNewNote('')
+    }
+  }
+
+  const removeNote = (index: number) => {
+    setEditData({
+      ...editData,
+      notes: editData.notes.filter((_, i) => i !== index)
+    })
+  }
+
+  if (isEditing) {
+    return (
+      <div className="max-w-2xl mx-auto px-5 py-6">
+        <h1 className="header-title text-center mb-8">✏️ עריכת פרטי טיסה</h1>
+        
+        {/* Outbound Flight Edit */}
+        <div className="card p-5 mb-6">
+          <div className="text-center mb-4">
+            <span className="badge-blue px-4 py-2">טיסה הלוך</span>
+          </div>
+          <div className="space-y-3">
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">תאריך</label>
+              <input
+                type="text"
+                value={editData.outbound.date}
+                onChange={(e) => setEditData({...editData, outbound: {...editData.outbound, date: e.target.value}})}
+                className="w-full p-3 border border-gray-200 rounded-xl bg-white text-sm"
+                placeholder="13/09/2026"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">מסלול</label>
+              <input
+                type="text"
+                value={editData.outbound.route}
+                onChange={(e) => setEditData({...editData, outbound: {...editData.outbound, route: e.target.value}})}
+                className="w-full p-3 border border-gray-200 rounded-xl bg-white text-sm"
+                placeholder="TLV → PRG"
+              />
+            </div>
+            <div className="flex gap-2">
+              <div className="flex-1">
+                <label className="block text-sm font-bold text-gray-700 mb-1">שעת המראה</label>
+                <input
+                  type="text"
+                  value={editData.outbound.departureTime}
+                  onChange={(e) => setEditData({...editData, outbound: {...editData.outbound, departureTime: e.target.value}})}
+                  className="w-full p-3 border border-gray-200 rounded-xl bg-white text-sm"
+                  placeholder="06:00"
+                />
+              </div>
+              <div className="flex-1">
+                <label className="block text-sm font-bold text-gray-700 mb-1">שעת נחיתה</label>
+                <input
+                  type="text"
+                  value={editData.outbound.arrivalTime}
+                  onChange={(e) => setEditData({...editData, outbound: {...editData.outbound, arrivalTime: e.target.value}})}
+                  className="w-full p-3 border border-gray-200 rounded-xl bg-white text-sm"
+                  placeholder="10:00"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Return Flight Edit */}
+        <div className="card p-5 mb-6">
+          <div className="text-center mb-4">
+            <span className="badge-orange px-4 py-2">טיסה חזור</span>
+          </div>
+          <div className="space-y-3">
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">תאריך</label>
+              <input
+                type="text"
+                value={editData.return.date}
+                onChange={(e) => setEditData({...editData, return: {...editData.return, date: e.target.value}})}
+                className="w-full p-3 border border-gray-200 rounded-xl bg-white text-sm"
+                placeholder="22/09/2026"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-bold text-gray-700 mb-1">מסלול</label>
+              <input
+                type="text"
+                value={editData.return.route}
+                onChange={(e) => setEditData({...editData, return: {...editData.return, route: e.target.value}})}
+                className="w-full p-3 border border-gray-200 rounded-xl bg-white text-sm"
+                placeholder="PRG → TLV"
+              />
+            </div>
+            <div className="flex gap-2">
+              <div className="flex-1">
+                <label className="block text-sm font-bold text-gray-700 mb-1">שעת המראה</label>
+                <input
+                  type="text"
+                  value={editData.return.departureTime}
+                  onChange={(e) => setEditData({...editData, return: {...editData.return, departureTime: e.target.value}})}
+                  className="w-full p-3 border border-gray-200 rounded-xl bg-white text-sm"
+                  placeholder="14:00"
+                />
+              </div>
+              <div className="flex-1">
+                <label className="block text-sm font-bold text-gray-700 mb-1">שעת נחיתה</label>
+                <input
+                  type="text"
+                  value={editData.return.arrivalTime}
+                  onChange={(e) => setEditData({...editData, return: {...editData.return, arrivalTime: e.target.value}})}
+                  className="w-full p-3 border border-gray-200 rounded-xl bg-white text-sm"
+                  placeholder="19:00"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Notes Edit */}
+        <div className="card p-5 mb-6">
+          <h2 className="font-bold text-gray-800 mb-4 text-center">📝 הערות חשובות</h2>
+          <div className="space-y-2 mb-4">
+            {editData.notes.map((note, idx) => (
+              <div key={idx} className="flex items-center gap-2 bg-gray-50 p-3 rounded-xl">
+                <span className="flex-1 text-sm">{note}</span>
+                <button
+                  onClick={() => removeNote(idx)}
+                  className="text-red-500 hover:text-red-700 text-sm font-bold"
+                >
+                  ✕
+                </button>
+              </div>
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <input
+              type="text"
+              value={newNote}
+              onChange={(e) => setNewNote(e.target.value)}
+              className="flex-1 p-3 border border-gray-200 rounded-xl bg-white text-sm"
+              placeholder="הוסף הערה חדשה..."
+              onKeyPress={(e) => e.key === 'Enter' && addNote()}
+            />
+            <button
+              onClick={addNote}
+              className="px-4 py-2 rounded-xl text-sm font-bold"
+              style={{ backgroundColor: '#3b82f6', color: 'white' }}
+            >
+              +
+            </button>
+          </div>
+        </div>
+
+        {/* Actions */}
+        <div className="space-y-3">
+          <button
+            onClick={handleSave}
+            className="w-full py-4 rounded-xl text-lg font-bold transition-all"
+            style={{ backgroundColor: '#22c55e', color: 'white' }}
+          >
+            💾 שמור
+          </button>
+          <button
+            onClick={handleCancel}
+            className="w-full py-4 rounded-xl text-lg font-bold transition-all"
+            style={{ backgroundColor: '#e5e7eb', color: '#374151' }}
+          >
+            ביטול
+          </button>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="max-w-2xl mx-auto px-5 py-6">
-      <h1 className="header-title text-center mb-8">✈️ פרטי טיסה</h1>
+      <h1 className="header-title text-center mb-6">✈️ פרטי טיסה</h1>
+      
+      {/* Edit Button */}
+      <div className="text-center mb-6">
+        <button
+          onClick={() => { setEditData(flightData); setIsEditing(true); }}
+          className="badge-orange px-4 py-2 text-sm font-bold"
+        >
+          ✏️ ערוך פרטים
+        </button>
+      </div>
       
       {/* Outbound Flight */}
       <div className="card p-5 mb-6">
@@ -475,25 +721,25 @@ function FlightView() {
           <div className="info-box info-box-blue">
             <div className="flex justify-between items-center">
               <span className="font-bold">📅 תאריך</span>
-              <span>13/09/2026</span>
+              <span>{flightData.outbound.date}</span>
             </div>
           </div>
           <div className="info-box info-box-purple">
             <div className="flex justify-between items-center">
               <span className="font-bold">🛫 המראה</span>
-              <span>TLV → PRG</span>
+              <span>{flightData.outbound.route}</span>
             </div>
           </div>
           <div className="info-box info-box-green">
             <div className="flex justify-between items-center">
               <span className="font-bold">⏰ שעת המראה</span>
-              <span>06:00</span>
+              <span>{flightData.outbound.departureTime}</span>
             </div>
           </div>
           <div className="info-box info-box-orange">
             <div className="flex justify-between items-center">
               <span className="font-bold">⏰ שעת נחיתה</span>
-              <span>10:00 (שעון מקומי)</span>
+              <span>{flightData.outbound.arrivalTime}</span>
             </div>
           </div>
         </div>
@@ -508,25 +754,25 @@ function FlightView() {
           <div className="info-box info-box-blue">
             <div className="flex justify-between items-center">
               <span className="font-bold">📅 תאריך</span>
-              <span>22/09/2026</span>
+              <span>{flightData.return.date}</span>
             </div>
           </div>
           <div className="info-box info-box-purple">
             <div className="flex justify-between items-center">
               <span className="font-bold">🛬 נחיתה</span>
-              <span>PRG → TLV</span>
+              <span>{flightData.return.route}</span>
             </div>
           </div>
           <div className="info-box info-box-green">
             <div className="flex justify-between items-center">
               <span className="font-bold">⏰ שעת המראה</span>
-              <span>14:00</span>
+              <span>{flightData.return.departureTime}</span>
             </div>
           </div>
           <div className="info-box info-box-orange">
             <div className="flex justify-between items-center">
               <span className="font-bold">⏰ שעת נחיתה</span>
-              <span>19:00 (שעון ישראל)</span>
+              <span>{flightData.return.arrivalTime}</span>
             </div>
           </div>
         </div>
@@ -536,15 +782,11 @@ function FlightView() {
       <div className="card p-5">
         <h2 className="font-bold text-gray-800 mb-4 text-center">📝 הערות חשובות</h2>
         <div className="space-y-3">
-          <div className="info-box info-box-red">
-            <span className="font-bold">⚠️ להגיע לשדה 3 שעות לפני</span>
-          </div>
-          <div className="info-box info-box-blue">
-            <span>📄 לוודא דרכונים בתוקף</span>
-          </div>
-          <div className="info-box info-box-green">
-            <span>🧳 משקל מזוודה: עד 23 ק״ג</span>
-          </div>
+          {flightData.notes.map((note, idx) => (
+            <div key={idx} className={`info-box ${idx === 0 ? 'info-box-red' : idx === 1 ? 'info-box-blue' : 'info-box-green'}`}>
+              <span>{idx === 0 ? '⚠️ ' : idx === 1 ? '📄 ' : '🧳 '}{note}</span>
+            </div>
+          ))}
         </div>
       </div>
     </div>
