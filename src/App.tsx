@@ -159,55 +159,59 @@ function ItineraryView({ onSelectDay }: { onSelectDay: (day: number) => void }) 
 }
 
 function BookingsView() {
-  const [bookings, setBookings] = useState(bookingsData.bookings)
+  const [completedIds, setCompletedIds] = useState<number[]>(() => {
+    const saved = localStorage.getItem('bookings-completed')
+    return saved ? JSON.parse(saved) : []
+  })
   
   const toggleCompleted = (id: number) => {
-    setBookings(bookings.map(b => b.id === id ? { ...b, completed: !b.completed } : b))
+    const newCompletedIds = completedIds.includes(id) 
+      ? completedIds.filter(i => i !== id)
+      : [...completedIds, id]
+    setCompletedIds(newCompletedIds)
+    localStorage.setItem('bookings-completed', JSON.stringify(newCompletedIds))
   }
   
   return (
     <div className="max-w-2xl mx-auto px-5 py-6">
       <h1 className="header-title text-center mb-8">📋 הזמנות</h1>
       <div className="space-y-6">
-        {bookings.map((booking) => (
-          <div
-            key={booking.id}
-            className={`card p-5 ${booking.completed ? 'opacity-50' : ''}`}
-          >
-            <div className="flex gap-4">
-              <div className="flex-1">
-                <div className="flex items-start justify-between gap-3 mb-3">
-                  <h3 className={`font-bold text-gray-800 ${booking.completed ? 'line-through' : ''}`}>
-                    {booking.item}
-                  </h3>
-                  <span className={`${booking.priority === 'high' ? 'badge-red' : 'badge-orange'} text-xs flex-shrink-0`}>
-                    {booking.dates}
-                  </span>
+        {bookingsData.bookings.map((booking) => {
+          const isCompleted = completedIds.includes(booking.id)
+          return (
+            <div
+              key={booking.id}
+              onClick={() => toggleCompleted(booking.id)}
+              className={`card p-5 cursor-pointer ${isCompleted ? 'opacity-50' : ''}`}
+            >
+              <div className="text-center mb-4">
+                <span className={`${booking.priority === 'high' ? 'badge-red' : 'badge-orange'}`}>
+                  {booking.dates}
+                </span>
+              </div>
+              <h3 className={`font-bold text-gray-800 text-lg mb-3 text-center ${isCompleted ? 'line-through' : ''}`}>
+                {booking.item}
+              </h3>
+              <p className="text-gray-600 text-sm mb-4 text-center">{booking.description}</p>
+              {booking.notes && (
+                <div className="info-box info-box-blue text-sm text-gray-600 mb-4">
+                  💡 {booking.notes}
                 </div>
-                <p className="text-gray-600 text-sm mb-3">{booking.description}</p>
-                {booking.notes && (
-                  <div className="info-box info-box-blue text-sm text-gray-600 mb-4">
-                    💡 {booking.notes}
-                  </div>
-                )}
+              )}
+              <div className="text-center">
                 <a
                   href={booking.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn btn-primary text-sm py-2 px-4"
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-blue-600 hover:text-blue-800 underline text-sm"
                 >
-                  🔗 פתח
+                  🔗 {booking.item}
                 </a>
               </div>
-              <input
-                type="checkbox"
-                checked={booking.completed}
-                onChange={() => toggleCompleted(booking.id)}
-                className="mt-1 flex-shrink-0"
-              />
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   )
@@ -355,6 +359,18 @@ interface DayDetailViewProps {
 function DayDetailView({ day, onBack }: DayDetailViewProps) {
   const dayPlan = dailyPlansData.dailyPlans.find(d => d.day === day)
   
+  const findLinkForActivity = (activity: string, description: string) => {
+    if (!dayPlan?.links) return null
+    const text = (activity + ' ' + description).toLowerCase()
+    return dayPlan.links.find(link => {
+      const linkType = link.type.toLowerCase()
+      if (linkType === 'קמפינג' && (text.includes('camping') || text.includes('check-in'))) return true
+      if (text.includes(linkType)) return true
+      const linkWords = linkType.split(' ')
+      return linkWords.some(word => word.length > 3 && text.includes(word.toLowerCase()))
+    })
+  }
+  
   if (!dayPlan) {
     return (
       <div className="max-w-2xl mx-auto px-5 py-8 text-center">
@@ -382,22 +398,35 @@ function DayDetailView({ day, onBack }: DayDetailViewProps) {
       <div className="card p-6 mb-6">
         <h2 className="font-bold text-gray-800 text-lg mb-5 text-center">📋 לוח זמנים</h2>
         <div className="space-y-5">
-          {dayPlan.schedule.map((item, idx) => (
-            <div key={idx} className="info-box info-box-purple">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="badge-blue text-xs">{item.time}</span>
-                {item.transport && item.transport !== '—' && <span className="text-sm text-gray-500">{item.transport}</span>}
+          {dayPlan.schedule.map((item, idx) => {
+            const matchedLink = findLinkForActivity(item.activity, item.description)
+            return (
+              <div key={idx} className="info-box info-box-purple">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="badge-blue text-xs">{item.time}</span>
+                  {item.transport && item.transport !== '—' && <span className="text-sm text-gray-500">{item.transport}</span>}
+                </div>
+                <h4 className="font-bold text-gray-800 mb-2">{item.activity}</h4>
+                <p className="text-gray-600 text-sm">{item.description}</p>
+                {item.food && item.food !== '—' && (
+                  <p className="text-emerald-600 text-sm mt-3">🍽️ {item.food}</p>
+                )}
+                {item.notes && (
+                  <p className="text-gray-500 text-xs mt-3">📝 {item.notes}</p>
+                )}
+                {matchedLink && (
+                  <a
+                    href={matchedLink.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline text-sm mt-3 inline-block"
+                  >
+                    🔗 {matchedLink.type}
+                  </a>
+                )}
               </div>
-              <h4 className="font-bold text-gray-800 mb-2">{item.activity}</h4>
-              <p className="text-gray-600 text-sm">{item.description}</p>
-              {item.food && item.food !== '—' && (
-                <p className="text-emerald-600 text-sm mt-3">🍽️ {item.food}</p>
-              )}
-              {item.notes && (
-                <p className="text-gray-500 text-xs mt-3">📝 {item.notes}</p>
-              )}
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
 
@@ -418,23 +447,6 @@ function DayDetailView({ day, onBack }: DayDetailViewProps) {
         <h3 className="font-bold text-gray-800 mb-3">🌧️ גשם</h3>
         <p className="text-gray-600 text-sm">{dayPlan.weatherBackup}</p>
       </div>
-
-      {/* Links */}
-      {dayPlan.links && dayPlan.links.length > 0 && (
-        <div className="space-y-3">
-          {dayPlan.links.map((link, idx) => (
-            <a
-              key={idx}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-primary w-full text-sm"
-            >
-              {link.type}
-            </a>
-          ))}
-        </div>
-      )}
     </div>
   )
 }
