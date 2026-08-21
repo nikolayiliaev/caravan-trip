@@ -16,7 +16,7 @@
       "accommodation": "Camping Panorama Lipno",
       "recommendedFood": "ערב בקראוון: פסטה, רוטב עגבניות, פרמזן וסלט.",
       "weatherBackup": "יום מעבר – במקרה עיכוב טיסה להגיע ישר לקמפינג.",
-      "links": [{"type": "קמפינג", "url": "https://camping-panorama.cz/en/"}, {"type": "Penny Market", "url": "https://www.google.com/maps/search/?api=1&query=Penny+Market+Tuchom%C4%9B%C5%99ice+Czechia"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/dir/?api=1&origin=Tuchom%C4%9B%C5%99ice%2C+Czechia&destination=Camping+Panorama+Lipno%2C+Czechia&travelmode=driving&waypoints=Penny+Market%2C+Ke+Kopanin%C4%9B%2C+Tuchom%C4%9B%C5%99ice%2C+Czechia"}, {"type": "קמפינג", "url": "https://camping-panorama.cz/en/"}, {"type": "Penny Market", "url": "https://www.google.com/maps/search/?api=1&query=Penny+Market+Tuchom%C4%9B%C5%99ice+Czechia"}]
     },
     {
       "date": "14/09/2026",
@@ -35,7 +35,7 @@
       "accommodation": "Camping Panorama Lipno — לילה 2/2",
       "recommendedFood": "צהריים בחוץ; ערב חביתה + סלט + לחם בקראוון.",
       "weatherBackup": "LEGO + Aquaworld; Bobovka רק אם יבש.",
-      "links": [{"type": "קמפינג", "url": "https://camping-panorama.cz/en/"}, {"type": "Treetop Trail", "url": "https://www.stezkakorunamistromu.cz/en/"}, {"type": "Kingdom of Forest", "url": "https://www.kralovstvilesa.cz/en/"}, {"type": "Bobovka", "url": "https://www.lipno.cz/volny-cas/adrenalinove-aktivity/bobova-draha"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/search/?api=1&query=Lipno+Family+Resort+Treetop+Walkway+Czechia"}, {"type": "קמפינג", "url": "https://camping-panorama.cz/en/"}, {"type": "Treetop Trail", "url": "https://www.stezkakorunamistromu.cz/en/"}, {"type": "Kingdom of Forest", "url": "https://www.kralovstvilesa.cz/en/"}, {"type": "Bobovka", "url": "https://www.lipno.cz/volny-cas/adrenalinove-aktivity/bobova-draha"}]
     },
     {
       "date": "15/09/2026",
@@ -52,7 +52,7 @@
       "accommodation": "Camping Traunsee",
       "recommendedFood": "צהריים Gmunden; בערב טורטיות/עוף בקראוון.",
       "weatherBackup": "לוותר על Flitzer; Gmunden + קפה/מוזיאון.",
-      "links": [{"type": "קמפינג", "url": "https://camping-traunsee.at/en/"}, {"type": "Grünberg", "url": "https://www.gruenberg.info/en/"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Panorama+Lipno%2C+Czechia&destination=Camping+Traunsee%2C+Altm%C3%BCnster%2C+Austria&travelmode=driving&waypoints=Traunfall%2C+Austria%7CGr%C3%BCnberg+cable+car%2C+Gmunden%2C+Austria"}, {"type": "קמפינג", "url": "https://camping-traunsee.at/en/"}, {"type": "Grünberg", "url": "https://www.gruenberg.info/en/"}]
     },
     {
       "date": "16/09/2026",
@@ -70,7 +70,7 @@
       "accommodation": "Camping Temel Altaussee — לילה 1/2",
       "recommendedFood": "צהריים Hallstatt; ערב קל בקראוון.",
       "weatherBackup": "Salzwelten מצוין לגשם; לקצר טיילת.",
-      "links": [{"type": "קמפינג", "url": "https://www.camping-altaussee.com/en/"}, {"type": "Salzwelten", "url": "https://salzwelten.at/en/hallstatt/prices-opening-hours"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Traunsee%2C+Altm%C3%BCnster%2C+Austria&destination=Camping+Temel%2C+Altaussee%2C+Austria&travelmode=driving"}, {"type": "🗺️ Hallstatt", "url": "https://www.google.com/maps/search/?api=1&query=Hallstatt+Austria+Salzwelten"}, {"type": "קמפינג", "url": "https://www.camping-altaussee.com/en/"}, {"type": "Salzwelten", "url": "https://salzwelten.at/en/hallstatt/prices-opening-hours"}]
     },
     {
       "date": "17/09/2026",
@@ -88,7 +88,7 @@
       "accommodation": "Camping Temel — לילה 2/2",
       "recommendedFood": "צהריים בהר/תחנה; ערב בקראוון או בעיירה.",
       "weatherBackup": "אם הראות חלשה – מערת הקרח; בסגירות: Altaussee/Bad Aussee.",
-      "links": [{"type": "קמפינג", "url": "https://www.camping-altaussee.com/en/"}, {"type": "Dachstein", "url": "https://www.dachstein-salzkammergut.com/en/"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/search/?api=1&query=Dachstein+Krippenstein+Obertraun+Austria"}, {"type": "קמפינג", "url": "https://www.camping-altaussee.com/en/"}, {"type": "Dachstein", "url": "https://www.dachstein-salzkammergut.com/en/"}]
     },
     {
       "date": "18/09/2026",
@@ -105,7 +105,7 @@
       "accommodation": "Paradiescamping Wolfgangsee — לילה 1/2",
       "recommendedFood": "צהריים פשוט; ערב בקראוון מול האגם.",
       "weatherBackup": "שיט/עיירות אם בטוח; קפה ו-St. Gilgen.",
-      "links": [{"type": "קמפינג", "url": "https://www.paradiescamping.at/en/"}, {"type": "Wolfgangsee ferry", "url": "https://www.5schaetze.at/en/wolfgangseeschifffahrt/prices-and-timetables.html"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Temel%2C+Altaussee%2C+Austria&destination=Paradiescamping+Wolfgangsee%2C+Abersee%2C+Austria&travelmode=driving"}, {"type": "קמפינג", "url": "https://www.paradiescamping.at/en/"}, {"type": "Wolfgangsee ferry", "url": "https://www.5schaetze.at/en/wolfgangseeschifffahrt/prices-and-timetables.html"}]
     },
     {
       "date": "19/09/2026",
@@ -123,7 +123,7 @@
       "accommodation": "Paradiescamping Wolfgangsee — לילה 2/2",
       "recommendedFood": "צהריים בעיירה; ערב קל בקמפינג.",
       "weatherBackup": "הרכבת עלולה להשתנות; Plan B שיט + St. Wolfgang/St. Gilgen.",
-      "links": [{"type": "קמפינג", "url": "https://www.paradiescamping.at/en/"}, {"type": "Schafbergbahn", "url": "https://www.5schaetze.at/en/schafbergbahn/prices-and-timetables.html"}, {"type": "Wolfgangsee ferry", "url": "https://www.5schaetze.at/en/wolfgangseeschifffahrt/prices-and-timetables.html"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/search/?api=1&query=SchafbergBahn+St+Wolfgang+Austria"}, {"type": "קמפינג", "url": "https://www.paradiescamping.at/en/"}, {"type": "Schafbergbahn", "url": "https://www.5schaetze.at/en/schafbergbahn/prices-and-timetables.html"}, {"type": "Wolfgangsee ferry", "url": "https://www.5schaetze.at/en/wolfgangseeschifffahrt/prices-and-timetables.html"}]
     },
     {
       "date": "20/09/2026",
@@ -141,7 +141,7 @@
       "accommodation": "Camping Sokol Praha — לילה 1/2",
       "recommendedFood": "צהריים Hellbrunn; ערב פשוט בקמפינג.",
       "weatherBackup": "בגשם כבד לדלג Golling; Hellbrunn פתוח בכל מזג אוויר.",
-      "links": [{"type": "קמפינג", "url": "https://www.campingsokol.cz/en/"}, {"type": "Golling Waterfall", "url": "https://golling.info/wasserfall/"}, {"type": "Hellbrunn", "url": "https://www.hellbrunn.at/en/"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/dir/?api=1&origin=Paradiescamping+Wolfgangsee%2C+Abersee%2C+Austria&destination=Camping+Sokol+Praha%2C+Prague%2C+Czechia&travelmode=driving&waypoints=Gollinger+Wasserfall%2C+Austria%7CHellbrunn+Palace%2C+Salzburg%2C+Austria"}, {"type": "קמפינג", "url": "https://www.campingsokol.cz/en/"}, {"type": "Golling Waterfall", "url": "https://golling.info/wasserfall/"}, {"type": "Hellbrunn", "url": "https://www.hellbrunn.at/en/"}]
     },
     {
       "date": "21/09/2026",
@@ -160,7 +160,7 @@
       "accommodation": "Camping Sokol Praha — לילה 2/2",
       "recommendedFood": "צהריים במרכז; ערב ב-Palladium.",
       "weatherBackup": "Palladium + indoor kids.",
-      "links": [{"type": "קמפינג", "url": "https://www.campingsokol.cz/en/"}, {"type": "Palladium", "url": "https://www.palladiumpraha.cz/en/"}, {"type": "Prague with kids", "url": "https://prague.eu/en/kids/"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/search/?api=1&query=Old+Town+Square+Prague+Palladium"}, {"type": "קמפינג", "url": "https://www.campingsokol.cz/en/"}, {"type": "Palladium", "url": "https://www.palladiumpraha.cz/en/"}, {"type": "Prague with kids", "url": "https://prague.eu/en/kids/"}]
     },
     {
       "date": "22/09/2026",
@@ -178,7 +178,7 @@
       "accommodation": "—",
       "recommendedFood": "בוקר בקראוון; אוכל בשדה.",
       "weatherBackup": "לא רלוונטי.",
-      "links": [{"type": "GO Tank", "url": "https://www.goparking.cz/gotank/"}, {"type": "Blue Campers", "url": "https://www.google.com/maps/search/?api=1&query=Blue+Campers+Tuchom%C4%9B%C5%99ice+Czechia"}]
+      "links": [{"type": "🗺️ מפה ליום", "url": "https://www.google.com/maps/dir/?api=1&origin=Camping+Sokol+Praha%2C+Prague%2C+Czechia&destination=Blue+Campers+Tuchom%C4%9B%C5%99ice%2C+Czechia&travelmode=driving&waypoints=GO+tank+Tuchom%C4%9B%C5%99ice+Czechia"}, {"type": "GO Tank", "url": "https://www.goparking.cz/gotank/"}, {"type": "Blue Campers", "url": "https://www.google.com/maps/search/?api=1&query=Blue+Campers+Tuchom%C4%9B%C5%99ice+Czechia"}]
     }
   ]
 }

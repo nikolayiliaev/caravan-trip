@@ -361,6 +361,11 @@ interface DayDetailViewProps {
 
 function DayDetailView({ day, onBack }: DayDetailViewProps) {
   const dayPlan = dailyPlansData.dailyPlans.find(d => d.day === day)
+  const [openAccordion, setOpenAccordion] = useState<string | null>(null)
+  
+  const toggleAccordion = (id: string) => {
+    setOpenAccordion(openAccordion === id ? null : id)
+  }
   
   const findLinkForActivity = (activity: string, description: string) => {
     if (!dayPlan?.links) return null
@@ -377,7 +382,7 @@ function DayDetailView({ day, onBack }: DayDetailViewProps) {
   if (!dayPlan) {
     return (
       <div className="max-w-2xl mx-auto px-5 py-8 text-center">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6">פרטים יתווספו בקרוב...</h1>
+        <h1 className="text-xl font-bold text-gray-800 mb-6">פרטים יתווספו בקרוב...</h1>
         <button onClick={onBack} className="btn btn-primary">חזרה</button>
       </div>
     )
@@ -386,43 +391,88 @@ function DayDetailView({ day, onBack }: DayDetailViewProps) {
   return (
     <div className="max-w-2xl mx-auto px-5 py-6">
       {/* Header */}
-      <div className="card p-6 mb-6 text-center">
-        <span className="badge-purple mb-4 inline-block">יום {dayPlan.day}</span>
-        <h1 className="text-2xl font-bold text-gray-800 mb-2">{dayPlan.title}</h1>
-        <p className="text-gray-500">{dayPlan.date}</p>
-        {dayPlan.area && (
-          <div className="info-box info-box-blue mt-5 text-right">
-            <p className="text-sm text-gray-700">{dayPlan.area.description}</p>
-          </div>
+      <div className="card p-4 mb-4 text-center">
+        <span className="badge-purple mb-2 inline-block text-xs">יום {dayPlan.day}</span>
+        <h2 className="text-base font-bold text-gray-800 mb-1">{dayPlan.title}</h2>
+        <p className="text-gray-500 text-xs">{dayPlan.date}</p>
+        {dayPlan.links && dayPlan.links.find(l => l.type.includes('מפה')) && (
+          <a
+            href={dayPlan.links.find(l => l.type.includes('מפה'))?.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block mt-3 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-600"
+          >
+            🗺️ פתח מפה ליום
+          </a>
         )}
       </div>
 
+      {/* Accordions - Info */}
+      <div className="flex gap-2 mb-4">
+        <button 
+          onClick={() => toggleAccordion('accommodation')}
+          className={`flex-1 card p-3 text-center text-sm font-bold ${openAccordion === 'accommodation' ? 'ring-2 ring-green-500' : ''}`}
+        >
+          🏕️ לינה
+        </button>
+        <button 
+          onClick={() => toggleAccordion('food')}
+          className={`flex-1 card p-3 text-center text-sm font-bold ${openAccordion === 'food' ? 'ring-2 ring-orange-500' : ''}`}
+        >
+          🍽️ אוכל
+        </button>
+        <button 
+          onClick={() => toggleAccordion('weather')}
+          className={`flex-1 card p-3 text-center text-sm font-bold ${openAccordion === 'weather' ? 'ring-2 ring-blue-500' : ''}`}
+        >
+          🌧️ גשם
+        </button>
+      </div>
+      
+      {openAccordion && (
+        <div className="card p-4 mb-4 text-gray-600 text-sm">
+          {openAccordion === 'accommodation' && dayPlan.accommodation}
+          {openAccordion === 'food' && dayPlan.recommendedFood}
+          {openAccordion === 'weather' && dayPlan.weatherBackup}
+        </div>
+      )}
+
+      {/* Area description */}
+      {dayPlan.area && (
+        <div className="info-box info-box-blue mb-5 text-right">
+          <p className="text-sm text-gray-700">{dayPlan.area.description}</p>
+        </div>
+      )}
+
       {/* Schedule */}
-      <div className="card p-6 mb-6">
-        <h2 className="font-bold text-gray-800 text-lg mb-5 text-center">📋 לוח זמנים</h2>
-        <div className="space-y-5">
+      <div className="card p-5 mb-5">
+        <h2 className="font-bold text-gray-800 mb-4 text-center">📋 לוח זמנים</h2>
+        <div className="space-y-4">
           {dayPlan.schedule.map((item, idx) => {
             const matchedLink = findLinkForActivity(item.activity, item.description)
+            const transportText = item.transport && item.transport !== '—' 
+              ? item.transport.replace(/🚐/g, '').trim() 
+              : null
             return (
               <div key={idx} className="info-box info-box-purple">
-                <div className="flex items-center gap-3 mb-3">
+                <div className="flex items-center gap-3 mb-2">
                   <span className="badge-blue text-xs">{item.time}</span>
-                  {item.transport && item.transport !== '—' && <span className="text-sm text-gray-500">{item.transport}</span>}
+                  {transportText && <span className="text-sm text-gray-500">{transportText}</span>}
                 </div>
-                <h4 className="font-bold text-gray-800 mb-2">{item.activity}</h4>
-                <p className="text-gray-600 text-sm">{item.description}</p>
+                <h4 className="font-bold text-gray-800 mb-1 text-sm">{item.activity}</h4>
+                <p className="text-gray-600 text-xs">{item.description}</p>
                 {item.food && item.food !== '—' && (
-                  <p className="text-emerald-600 text-sm mt-3">🍽️ {item.food}</p>
+                  <p className="text-emerald-600 text-xs mt-2">🍽️ {item.food}</p>
                 )}
                 {item.notes && (
-                  <p className="text-gray-500 text-xs mt-3">📝 {item.notes}</p>
+                  <p className="text-gray-500 text-xs mt-2">📝 {item.notes}</p>
                 )}
                 {matchedLink && (
                   <a
                     href={matchedLink.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline text-sm mt-3 inline-block"
+                    className="text-blue-600 hover:text-blue-800 underline text-xs mt-2 inline-block"
                   >
                     🔗 {matchedLink.type}
                   </a>
@@ -430,22 +480,6 @@ function DayDetailView({ day, onBack }: DayDetailViewProps) {
               </div>
             )
           })}
-        </div>
-      </div>
-
-      {/* Info */}
-      <div className="space-y-4 mb-6">
-        <div className="card p-5 text-center">
-          <h3 className="font-bold text-gray-800 mb-3">🏕️ לינה</h3>
-          <p className="text-gray-600">{dayPlan.accommodation}</p>
-        </div>
-        <div className="card p-5 text-center">
-          <h3 className="font-bold text-gray-800 mb-3">🍽️ אוכל</h3>
-          <p className="text-gray-600">{dayPlan.recommendedFood}</p>
-        </div>
-        <div className="card p-5 text-center border-r-4 border-amber-500">
-          <h3 className="font-bold text-gray-800 mb-3">🌧️ גשם</h3>
-          <p className="text-gray-600">{dayPlan.weatherBackup}</p>
         </div>
       </div>
     </div>
