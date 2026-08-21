@@ -223,14 +223,13 @@ function ShoppingView() {
       <h1 className="header-title text-center mb-8">🛒 קניות</h1>
       
       <div className="card p-6 mb-8 text-center">
-        <div className="text-4xl mb-3">📍</div>
         <h3 className="font-bold text-gray-800 text-lg mb-2">{shoppingData.shopping.mainStore.name}</h3>
         <p className="text-gray-500 text-sm mb-5">{shoppingData.shopping.mainStore.when}</p>
         <a
           href={shoppingData.shopping.mainStore.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-primary"
+          className="text-blue-600 hover:text-blue-800 underline"
         >
           🗺️ פתח מפה
         </a>
@@ -238,15 +237,17 @@ function ShoppingView() {
 
       <div className="space-y-6">
         {shoppingData.shopping.categories.map((category, idx) => (
-          <div key={idx} className="card p-5">
-            <div className="flex items-center justify-between gap-3 mb-3">
-              <h3 className="font-bold text-gray-800 text-lg">{category.name}</h3>
-              {category.rebuy && <span className="badge-green text-xs">לקנות שוב</span>}
-            </div>
+          <div key={idx} className="card p-5 text-center">
+            {category.rebuy && (
+              <div className="mb-3">
+                <span className="badge-green text-xs">לקנות שוב</span>
+              </div>
+            )}
+            <h3 className="font-bold text-gray-800 text-lg mb-3">{category.name}</h3>
             <p className="text-gray-600 text-sm mb-4">{category.items}</p>
-            <div className="flex flex-wrap gap-3 text-xs">
-              <span className="badge-light">📦 {category.quantity}</span>
-              <span className="badge-light">🍽️ {category.usage}</span>
+            <div className="flex flex-wrap justify-center gap-4 text-xs mt-4">
+              <span className="badge-light px-4 py-2">📦 {category.quantity}</span>
+              <span className="badge-light px-4 py-2">🍽️ {category.usage}</span>
             </div>
           </div>
         ))}
@@ -261,22 +262,22 @@ function CaravanView() {
       <h1 className="header-title text-center mb-8">🚐 קראוון</h1>
       
       {/* Vehicle Info */}
-      <div className="card p-6 mb-8">
-        <h2 className="font-bold text-gray-800 text-lg mb-5 text-center">פרטי הרכב</h2>
+      <div className="card p-6 mb-6 text-center">
+        <h2 className="font-bold text-gray-800 text-lg mb-5">פרטי הרכב</h2>
         <div className="grid grid-cols-2 gap-4">
-          <div className="menu-card-blue rounded-xl p-3 text-center">
+          <div className="menu-card-blue rounded-xl p-4 text-center">
             <div className="text-xs opacity-80 mb-1">דגם</div>
             <div className="font-bold">{caravanData.caravan.model}</div>
           </div>
-          <div className="menu-card-pink rounded-xl p-3 text-center">
+          <div className="menu-card-pink rounded-xl p-4 text-center">
             <div className="text-xs opacity-80 mb-1">גובה</div>
             <div className="font-bold">{caravanData.caravan.height}</div>
           </div>
-          <div className="menu-card-green rounded-xl p-3 text-center">
+          <div className="menu-card-green rounded-xl p-4 text-center">
             <div className="text-xs opacity-80 mb-1">אורך</div>
             <div className="font-bold">{caravanData.caravan.length}</div>
           </div>
-          <div className="menu-card-orange rounded-xl p-3 text-center">
+          <div className="menu-card-orange rounded-xl p-4 text-center">
             <div className="text-xs opacity-80 mb-1">משקל</div>
             <div className="font-bold">{caravanData.caravan.weight}</div>
           </div>
@@ -284,32 +285,32 @@ function CaravanView() {
       </div>
 
       {/* Important */}
-      <div className="space-y-6 mb-8">
+      <div className="space-y-4 mb-6">
         {caravanData.caravan.important.map((item, idx) => (
           <div
             key={idx}
-            className={`card p-5 border-r-4 ${item.priority === 'critical' ? 'border-red-500' : 'border-amber-500'}`}
+            className={`card p-5 text-center border-r-4 ${item.priority === 'critical' ? 'border-red-500' : 'border-amber-500'}`}
           >
-            <h3 className="font-bold text-gray-800 mb-2">{item.title}</h3>
-            <p className="text-gray-600 text-sm">{item.description}</p>
+            <h3 className="font-bold text-gray-800 mb-3">{item.title}</h3>
+            <p className="text-gray-600">{item.description}</p>
           </div>
         ))}
       </div>
 
       {/* Tolls & Fuel */}
-      <div className="space-y-6">
-        <div className="card p-5">
+      <div className="space-y-4">
+        <div className="card p-5 text-center">
           <h3 className="font-bold text-gray-800 mb-3">🛣️ אגרות</h3>
-          <p className="text-gray-600 text-sm mb-4">{caravanData.tolls.austria.notes}</p>
-          <a href={caravanData.tolls.austria.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary text-sm py-2 px-4">
-            קנה וינייטה
+          <p className="text-gray-600 mb-4">{caravanData.tolls.austria.notes}</p>
+          <a href={caravanData.tolls.austria.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
+            🔗 קנה וינייטה
           </a>
         </div>
-        <div className="card p-5">
+        <div className="card p-5 text-center">
           <h3 className="font-bold text-gray-800 mb-3">⛽ דלק</h3>
-          <p className="text-gray-600 text-sm mb-4">📍 {caravanData.fuel.lastDay.location}</p>
-          <a href={caravanData.fuel.lastDay.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary text-sm py-2 px-4">
-            מיקום
+          <p className="text-gray-600 mb-4">📍 {caravanData.fuel.lastDay.location}</p>
+          <a href={caravanData.fuel.lastDay.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
+            🔗 מיקום
           </a>
         </div>
       </div>
@@ -323,26 +324,28 @@ function WeatherView() {
       <h1 className="header-title text-center mb-8">🌧️ תוכניות גשם</h1>
       <div className="space-y-6">
         {weatherBackupData.weatherBackup.map((plan, idx) => (
-          <div key={idx} className="card p-6">
-            <h3 className="text-xl font-bold text-gray-800 mb-5 text-center">{plan.area}</h3>
+          <div key={idx} className="card p-6 text-center">
+            <h3 className="text-xl font-bold text-gray-800 mb-5">{plan.area}</h3>
             <div className="space-y-4">
-              <div className="info-box info-box-orange">
+              <div className="info-box info-box-orange text-right">
                 <span className="font-bold">☀️ ראשית:</span> {plan.mainPlan}
               </div>
-              <div className="info-box info-box-blue">
+              <div className="info-box info-box-blue text-right">
                 <span className="font-bold">🌦️ Plan B:</span> {plan.planB}
               </div>
-              <div className="info-box info-box-purple">
+              <div className="info-box info-box-purple text-right">
                 <span className="font-bold">🌧️ Plan C:</span> {plan.planC}
               </div>
-              <div className="info-box info-box-red">
+              <div className="info-box info-box-red text-right">
                 <span className="font-bold">⚠️ לא לעשות:</span> {plan.dontDo}
               </div>
             </div>
             {plan.url && (
-              <a href={plan.url} target="_blank" rel="noopener noreferrer" className="btn btn-primary w-full mt-5 text-sm">
-                מידע נוסף
-              </a>
+              <div className="mt-5">
+                <a href={plan.url} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
+                  🔗 מידע נוסף
+                </a>
+              </div>
             )}
           </div>
         ))}
@@ -431,21 +434,19 @@ function DayDetailView({ day, onBack }: DayDetailViewProps) {
       </div>
 
       {/* Info */}
-      <div className="grid grid-cols-2 gap-5 mb-6">
-        <div className="card p-5">
-          <h3 className="font-bold text-gray-800 text-sm mb-3">🏕️ לינה</h3>
-          <p className="text-gray-600 text-sm">{dayPlan.accommodation}</p>
+      <div className="space-y-4 mb-6">
+        <div className="card p-5 text-center">
+          <h3 className="font-bold text-gray-800 mb-3">🏕️ לינה</h3>
+          <p className="text-gray-600">{dayPlan.accommodation}</p>
         </div>
-        <div className="card p-5">
-          <h3 className="font-bold text-gray-800 text-sm mb-3">🍽️ אוכל</h3>
-          <p className="text-gray-600 text-sm">{dayPlan.recommendedFood}</p>
+        <div className="card p-5 text-center">
+          <h3 className="font-bold text-gray-800 mb-3">🍽️ אוכל</h3>
+          <p className="text-gray-600">{dayPlan.recommendedFood}</p>
         </div>
-      </div>
-
-      {/* Weather */}
-      <div className="card p-5 mb-6 border-r-4 border-amber-500">
-        <h3 className="font-bold text-gray-800 mb-3">🌧️ גשם</h3>
-        <p className="text-gray-600 text-sm">{dayPlan.weatherBackup}</p>
+        <div className="card p-5 text-center border-r-4 border-amber-500">
+          <h3 className="font-bold text-gray-800 mb-3">🌧️ גשם</h3>
+          <p className="text-gray-600">{dayPlan.weatherBackup}</p>
+        </div>
       </div>
     </div>
   )
