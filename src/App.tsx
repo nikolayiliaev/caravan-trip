@@ -12,6 +12,31 @@ type View = 'home' | 'itinerary' | 'bookings' | 'shopping' | 'caravan' | 'weathe
 function App() {
   const [currentView, setCurrentView] = useState<View>('home')
   const [selectedDay, setSelectedDay] = useState<number>(1)
+  const [touchStart, setTouchStart] = useState<number | null>(null)
+  const [touchEnd, setTouchEnd] = useState<number | null>(null)
+  
+  const minSwipeDistance = 50
+  
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+  
+  const onTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+  
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return
+    const distance = touchEnd - touchStart
+    if (distance > minSwipeDistance && currentView !== 'home') {
+      if (currentView === 'day-detail') {
+        setCurrentView('itinerary')
+      } else {
+        setCurrentView('home')
+      }
+    }
+  }
 
   const renderView = () => {
     switch (currentView) {
@@ -35,20 +60,13 @@ function App() {
   }
 
   return (
-    <div dir="rtl" className="app-bg">
-      {currentView !== 'home' && (
-        <nav className="nav-bar sticky top-0 z-50">
-          <div className="max-w-2xl mx-auto px-5 py-4">
-            <button
-              onClick={() => setCurrentView('home')}
-              className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-bold text-lg"
-            >
-              <span className="text-xl">→</span>
-              <span>חזרה</span>
-            </button>
-          </div>
-        </nav>
-      )}
+    <div 
+      dir="rtl" 
+      className="app-bg"
+      onTouchStart={onTouchStart}
+      onTouchMove={onTouchMove}
+      onTouchEnd={onTouchEnd}
+    >
       <main className="pb-10">
         {renderView()}
       </main>
@@ -69,7 +87,6 @@ function HomeView({ onNavigate }: HomeViewProps) {
     <div className="max-w-2xl mx-auto px-5 py-8">
       {/* Header */}
       <div className="text-center mb-10">
-        <div className="text-6xl mb-4">🚐</div>
         <h1 className="header-title mb-3">{itineraryData.trip.title}</h1>
         <p className="text-gray-500 text-lg mb-5">{itineraryData.trip.dates}</p>
         {daysUntilTrip > 0 && (
@@ -83,27 +100,27 @@ function HomeView({ onNavigate }: HomeViewProps) {
       <div className="grid grid-cols-2 mb-12">
         <button onClick={() => onNavigate('itinerary')} className="menu-card menu-card-blue">
           <div className="text-4xl mb-2">📅</div>
-          <div className="font-bold text-lg">מסלול</div>
+          <div className="font-bold text-xl">מסלול</div>
         </button>
         <button onClick={() => onNavigate('bookings')} className="menu-card menu-card-green">
           <div className="text-4xl mb-2">📋</div>
-          <div className="font-bold text-lg">הזמנות</div>
+          <div className="font-bold text-xl">הזמנות</div>
         </button>
         <button onClick={() => onNavigate('shopping')} className="menu-card menu-card-orange">
           <div className="text-4xl mb-2">🛒</div>
-          <div className="font-bold text-lg">קניות</div>
+          <div className="font-bold text-xl">קניות</div>
         </button>
         <button onClick={() => onNavigate('caravan')} className="menu-card menu-card-purple">
           <div className="text-4xl mb-2">🚐</div>
-          <div className="font-bold text-lg">קראוון</div>
+          <div className="font-bold text-xl">קראוון</div>
         </button>
         <button onClick={() => onNavigate('weather')} className="menu-card menu-card-gray">
           <div className="text-4xl mb-2">🌧️</div>
-          <div className="font-bold text-lg">גשם</div>
+          <div className="font-bold text-xl">גשם</div>
         </button>
         <button onClick={() => window.open(mapsData.maps.overview[0].url, '_blank')} className="menu-card menu-card-pink">
           <div className="text-4xl mb-2">🗺️</div>
-          <div className="font-bold text-lg">מפות</div>
+          <div className="font-bold text-xl">מפות</div>
         </button>
       </div>
 
@@ -115,17 +132,17 @@ function ItineraryView({ onSelectDay }: { onSelectDay: (day: number) => void }) 
   return (
     <div className="max-w-2xl mx-auto px-5 py-6">
       <h1 className="header-title text-center mb-8">📅 מסלול הטיול</h1>
-      <div className="space-y-6">
+      <div className="space-y-6 flex flex-col items-center">
         {itineraryData.days.map((day) => (
           <button
             key={day.dayNumber}
             onClick={() => onSelectDay(day.dayNumber)}
-            className="card p-5 w-full text-right"
+            className="card p-5 w-full max-w-md text-right"
           >
-            <div className="flex items-center justify-between mb-3">
+            <div className="text-center mb-3">
               <span className="badge-purple">יום {day.dayNumber}</span>
-              <span className="text-gray-400 text-sm">{day.date} • {day.dayOfWeek}</span>
             </div>
+            <div className="text-gray-400 text-sm mb-3">{day.date} • {day.dayOfWeek}</div>
             <h3 className="text-xl font-bold text-gray-800 mb-2">{day.area}</h3>
             <p className="text-gray-600 mb-3">{day.mainActivity}</p>
             <div className="flex items-center justify-between pt-4 border-t border-gray-100">

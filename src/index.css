@@ -26,6 +26,9 @@
 .app-bg {
   background: linear-gradient(180deg, #f5f5dc 0%, #e8e4d4 50%, #f0ead6 100%);
   min-height: 100vh;
+  border-radius: 30px;
+  margin: 10px;
+  padding: 10px;
 }
 
 /* Card Styles */
@@ -50,11 +53,12 @@
   border-radius: 28px;
   padding: 32px 24px;
   margin: 15px;
-  color: white;
+  color: #1a1a1a;
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  font-size: 1.1rem;
 }
 
 .menu-card::before {
